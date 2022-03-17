@@ -1,0 +1,76 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design typing_tutor.ngc ...
+WARNING:NetListWriters:298 - No output is written to typing_tutor.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file typing_tutor.edif ...
+ngc2edif: Total memory usage is 4314700 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SDC_FileReader.ngc ...
+WARNING:NetListWriters:298 - No output is written to SDC_FileReader.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus XLXI_94/Mcount_cnt128_cy<4 : 2> on block
+   SDC_FileReader is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus XLXI_94/RET<25 : 0> on block
+   SDC_FileReader is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus XLXI_94/SpC_mux0003<3 : 0> on block
+   SDC_FileReader is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   XLXI_96/I_SectRdrControl/NextState_mux0026<4 : 2> on block SDC_FileReader is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus XLXI_96/I_SectRdrControl/RET_mux0001<4 :
+   0> on block SDC_FileReader is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file SDC_FileReader.edif ...
+ngc2edif: Total memory usage is 4322316 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design typing_tutor.ngc ...
+WARNING:NetListWriters:298 - No output is written to typing_tutor.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file typing_tutor.edif ...
+ngc2edif: Total memory usage is 4314124 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design SDC_FileReader.ngc ...
+WARNING:NetListWriters:298 - No output is written to SDC_FileReader.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus XLXI_94/Mcount_cnt128_cy<4 : 2> on block
+   SDC_FileReader is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus XLXI_94/RET<25 : 0> on block
+   SDC_FileReader is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus XLXI_94/SpC_mux0003<3 : 0> on block
+   SDC_FileReader is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   XLXI_96/I_SectRdrControl/NextState_mux0026<4 : 2> on block SDC_FileReader is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus XLXI_96/I_SectRdrControl/RET_mux0001<4 :
+   0> on block SDC_FileReader is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file SDC_FileReader.edif ...
+ngc2edif: Total memory usage is 4322316 kilobytes
+

@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd SDC_FileReader -sd VGAtxt48x20 -nt timestamp -i -p xc3s500e-fg320-4 typing_tutor.ngc typing_tutor.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o typing_tutor_map.ncd typing_tutor.ngd typing_tutor.pcf 
+par -w -intstyle ise -ol high -t 1 typing_tutor_map.ncd typing_tutor.ncd typing_tutor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml typing_tutor.twx typing_tutor.ncd -o typing_tutor.twr typing_tutor.pcf 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/typing_tutor.syr" 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_test/typing_tutor_typing_tutor_sch_tb_isim_beh.exe" -prj "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_test/typing_tutor_typing_tutor_sch_tb_beh.prj" "work.typing_tutor_typing_tutor_sch_tb" 
