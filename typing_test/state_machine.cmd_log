@@ -1,0 +1,4 @@
+vhdtdtfi -lib work state_machine.vhd -prj typing_test -o state_machine.spl -module state_machine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e state_machine.spl C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_test/state_machine.sym 
+vhdtdtfi -lib work state_machine.vhd -prj typing_test -o state_machine.spl -module state_machine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e state_machine.spl C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_test/state_machine.sym 

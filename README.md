@@ -12,3 +12,5 @@ Program "Typing tutor" będzie łączył w sobie funkcjonalności klawiatury, cz
 * Aby symulacja działała poprawnie należy zastąpić ścieżki w testbenchu w liniach *56, 99*, na ścieżki do zapisu bitmapy imitującej wyświetlacz VGA na własnym komputerze.
 
 * Ścieżkę w linii *119* zamienić na ściężkę do pliku tekstowego (np. 1.txt) na własnym komputerze.
+### **typing_test**
+* Zawiera schematy oraz pliki wykonane na zajęciach. Schemat "tutor.sch" zakłada przełączanie wejścia z karty SD na klawiaturę po wciśnięciu przycisku. Schemat "tutor_v2.sch" zakłada użycie maszyny stanów do takiej samej czynności (Zakłada, bo nie wiadomo czy działa xD).

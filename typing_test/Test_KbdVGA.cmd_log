@@ -1,0 +1,23 @@
+xst -intstyle ise -ifn "C:/ucisw2/typing_test/Test_KbdVGA.xst" -ofn "C:/ucisw2/typing_test/Test_KbdVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_KbdVGA_map.ncd Test_KbdVGA.ngd Test_KbdVGA.pcf 
+par -w -intstyle ise -ol high -t 1 Test_KbdVGA_map.ncd Test_KbdVGA.ncd Test_KbdVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_KbdVGA.twx Test_KbdVGA.ncd -o Test_KbdVGA.twr Test_KbdVGA.pcf 
+bitgen -intstyle ise -f Test_KbdVGA.ut Test_KbdVGA.ncd 
+xst -intstyle ise -ifn "C:/ucisw2/typing_test/Test_KbdVGA.xst" -ofn "C:/ucisw2/typing_test/Test_KbdVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_KbdVGA_map.ncd Test_KbdVGA.ngd Test_KbdVGA.pcf 
+par -w -intstyle ise -ol high -t 1 Test_KbdVGA_map.ncd Test_KbdVGA.ncd Test_KbdVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_KbdVGA.twx Test_KbdVGA.ncd -o Test_KbdVGA.twr Test_KbdVGA.pcf 
+bitgen -intstyle ise -f Test_KbdVGA.ut Test_KbdVGA.ncd 
+xst -intstyle ise -ifn "C:/ucisw2/typing_test/Test_KbdVGA.xst" -ofn "C:/ucisw2/typing_test/Test_KbdVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Test_KbdVGA_map.ncd Test_KbdVGA.ngd Test_KbdVGA.pcf 
+par -w -intstyle ise -ol high -t 1 Test_KbdVGA_map.ncd Test_KbdVGA.ncd Test_KbdVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Test_KbdVGA.twx Test_KbdVGA.ncd -o Test_KbdVGA.twr Test_KbdVGA.pcf 
+bitgen -intstyle ise -f Test_KbdVGA.ut Test_KbdVGA.ncd 
+xst -intstyle ise -ifn "C:/ucisw2/typing_test/Test_KbdVGA.xst" -ofn "C:/ucisw2/typing_test/Test_KbdVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -sd ../../Users/lab/Downloads/SDC_FileReader -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -sd ../../Users/lab/Downloads/SDC_FileReader -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -sd ../../Users/lab/Downloads/SDC_FileReader -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../Users/lab/Downloads/VGAtxt48x20 -sd ../../Users/lab/Downloads/PS2_Kbd -sd ../../Users/lab/Downloads/RotaryEnc -sd ../../Users/lab/Downloads/SDC_FileReader -nt timestamp -uc C:/Users/lab/Downloads/Test_KbdVGA/Test_KbdVGA/GenIO.ucf -p xc3s500e-fg320-4 Test_KbdVGA.ngc Test_KbdVGA.ngd  
