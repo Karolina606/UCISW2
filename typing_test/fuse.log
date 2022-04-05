@@ -1,0 +1,20 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/studia/UCISW2/typing_test_v2/state_machine_tb_isim_beh.exe" -prj "D:/studia/UCISW2/typing_test_v2/state_machine_tb_beh.prj" "work.state_machine_tb" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/studia/UCISW2/typing_test_v2/state_machine.vhd" into library work
+Parsing VHDL file "D:/studia/UCISW2/typing_test_v2/state_machine_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture behavioral of entity state_machine [state_machine_default]
+Compiling architecture behavior of entity state_machine_tb
+Time Resolution for simulation is 1ps.
+Compiled 7 VHDL Units
+Built simulation executable D:/studia/UCISW2/typing_test_v2/state_machine_tb_isim_beh.exe
+Fuse Memory Usage: 51724 KB
+Fuse CPU Usage: 468 ms

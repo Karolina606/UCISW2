@@ -76,24 +76,37 @@ begin
   end process;
 
   -- Outputs = process3
-  with HalfByte select         -- 0-15 => ASCII '0'-'F'
-    DO <= X"30" when "0000",
-          X"31" when "0001",
-          X"32" when "0010",
-          X"33" when "0011",
-          X"34" when "0100",
-          X"35" when "0101",
-          X"36" when "0110",
-          X"37" when "0111",
-          X"38" when "1000",
-          X"39" when "1001",
-          X"41" when "1010",
-          X"42" when "1011",
-          X"43" when "1100",
-          X"44" when "1101",
-          X"45" when "1110",
-          X"46" when others;
-  DORdy <= '1' when State = sSendH or State = sSendL
+  with regDI select         -- 0-15 => ASCII '0'-'F'
+    DO <= X"41" when X"1C", --A
+			X"42" when X"32", --B
+			X"43" when X"21", --C
+			X"44" when X"23", --D
+			X"45" when X"24", --E
+			X"46" when X"2B", --F
+			X"47" when X"34", --G
+			X"48" when X"33", --H
+			X"49" when X"43", --I
+			X"4A" when X"3B", --J
+			X"4B" when X"42", --K
+			X"4C" when X"4B", --L
+			X"4D" when X"3A", --M
+			X"4E" when X"31", --N
+			X"4F" when X"44", --O
+			X"50" when X"4D", --P
+			X"51" when X"15", --Q
+			X"52" when X"2D", --R
+			X"53" when X"1B", --S
+			X"54" when X"2C", --T
+			X"55" when X"3C", --U
+			X"56" when X"2A", --V
+			X"57" when X"1D", --W
+			X"58" when X"22", --X
+			X"59" when X"35", --Y
+			X"5A" when X"1A", --Z
+			X"78" when others; 
+			 
+			 -- TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  DORdy <= '1' when State = sSendH
            else '0';
   Busy  <= '1' when State /= sReady
            else '0';

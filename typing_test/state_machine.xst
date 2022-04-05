@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_test/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_test/xst"
+set -tmpdir "E:/studia/UCISW2/typing_test_v2/xst/projnav.tmp"
+set -xsthdpdir "E:/studia/UCISW2/typing_test_v2/xst"
 elaborate
 -ifn state_machine.prj
 -ifmt mixed

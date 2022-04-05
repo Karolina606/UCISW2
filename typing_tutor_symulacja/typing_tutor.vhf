@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : typing_tutor.vhf
--- /___/   /\     Timestamp : 03/17/2022 14:04:38
+-- /___/   /\     Timestamp : 04/05/2022 10:34:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_test/SDC_FileReader -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_test/VGAtxt48x20 -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_test/typing_tutor.vhf -w C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_test/typing_tutor.sch
+--Command: sch2hdl -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/SDC_FileReader -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/VGAtxt48x20 -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/typing_tutor.vhf -w C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/typing_tutor.sch
 --Design Name: typing_tutor
 --Device: spartan3e
 --Purpose:

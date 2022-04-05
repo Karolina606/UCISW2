@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/studia/UCISW2/typing_test_v2/state_machine_tb_isim_beh.exe" -prj "D:/studia/UCISW2/typing_test_v2/state_machine_tb_beh.prj" "work.state_machine_tb" 

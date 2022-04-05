@@ -2,12 +2,13 @@
 Clk
 Reset
 SD_Busy
-SD_Pop
 SD_DO_Rdy
 PS2_DO_Rdy
 =SD_DO[7:0]=
 =PS2_DO[7:0]=
 [Outputs]
 Char_WE
+NewlineOut
+SD_Pop
 =Char_DI[7:0]=
 [BiDir]

@@ -1,0 +1,4 @@
+vhdl work "state_machine.vhd"
+vhdl work "FSM_SendByte.vhd"
+vhdl work "Test_KbdVGA.vhf"
+vhdl work "tutor_v2.vhf"

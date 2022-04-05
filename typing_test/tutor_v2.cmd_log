@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf 
+bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf 
+bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf 
+bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf 
+bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf 
+bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 
+xst -intstyle ise -ifn "E:/studia/UCISW2/typing_test_v2/tutor_v2.xst" -ofn "E:/studia/UCISW2/typing_test_v2/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../typing_tutor/typing_tutor/VGAtxt48x20 -sd ../testy/PS2_Kbd -sd ../testy/RotaryEnc -sd ../testy/SDC_FileReader -nt timestamp -i -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf 
+bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 

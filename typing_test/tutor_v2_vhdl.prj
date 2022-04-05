@@ -1,0 +1,4 @@
+vhdl work "E:\studia\UCISW2\typing_test_v2\state_machine.vhd"
+vhdl work "E:\studia\UCISW2\typing_test_v2\FSM_SendByte.vhd"
+vhdl work "E:\studia\UCISW2\typing_test_v2\Test_KbdVGA.vhf"
+vhdl work "E:\studia\UCISW2\typing_test_v2\tutor_v2.vhf"

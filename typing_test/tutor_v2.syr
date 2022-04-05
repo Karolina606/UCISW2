@@ -1,0 +1,550 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: tutor_v2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tutor_v2.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tutor_v2"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : tutor_v2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../typing_tutor/typing_tutor/VGAtxt48x20" "../testy/PS2_Kbd" "../testy/RotaryEnc" "../testy/SDC_FileReader"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/studia/UCISW2/typing_test_v2/FSM_SendByte.vhd" in Library work.
+Architecture rtl of Entity fsm_sendbyte is up to date.
+Compiling vhdl file "E:/studia/UCISW2/typing_test_v2/state_machine.vhd" in Library work.
+Architecture behavioral of Entity state_machine is up to date.
+Compiling vhdl file "E:/studia/UCISW2/typing_test_v2/tutor_v2.vhf" in Library work.
+Entity <tutor_v2> compiled.
+Entity <tutor_v2> (Architecture <behavioral>) compiled.
+Compiling vhdl file "E:/studia/UCISW2/typing_test_v2/Test_KbdVGA.vhf" in Library work.
+Architecture behavioral of Entity test_kbdvga is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <tutor_v2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FSM_SendByte> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <state_machine> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <tutor_v2> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "E:/studia/UCISW2/typing_test_v2/tutor_v2.vhf" line 175: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "E:/studia/UCISW2/typing_test_v2/tutor_v2.vhf" line 234: Instantiating black box module <VGAtxt48x20>.
+WARNING:Xst:2211 - "E:/studia/UCISW2/typing_test_v2/tutor_v2.vhf" line 269: Instantiating black box module <SDC_FileReader>.
+Entity <tutor_v2> analyzed. Unit <tutor_v2> generated.
+
+Analyzing Entity <FSM_SendByte> in library <work> (Architecture <rtl>).
+Entity <FSM_SendByte> analyzed. Unit <FSM_SendByte> generated.
+
+Analyzing Entity <state_machine> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "E:/studia/UCISW2/typing_test_v2/state_machine.vhd" line 70: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <SD_DO>
+Entity <state_machine> analyzed. Unit <state_machine> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <FSM_SendByte>.
+    Related source file is "E:/studia/UCISW2/typing_test_v2/FSM_SendByte.vhd".
+WARNING:Xst:646 - Signal <HalfByte> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | sreset                                         |
+    | Power Up State     | sreset                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <regDI>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   8 D-type flip-flop(s).
+Unit <FSM_SendByte> synthesized.
+
+
+Synthesizing Unit <state_machine>.
+    Related source file is "E:/studia/UCISW2/typing_test_v2/state_machine.vhd".
+WARNING:Xst:1780 - Signal <Text> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_1> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | sreadfromsd                                    |
+    | Power Up State     | sreadfromsd                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <Char_DI>.
+    Found 1-bit register for signal <SD_Pop>.
+    Found 1-bit register for signal <Char_WE>.
+    Found 31-bit up counter for signal <CharNumber>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  10 D-type flip-flop(s).
+Unit <state_machine> synthesized.
+
+
+Synthesizing Unit <tutor_v2>.
+    Related source file is "E:/studia/UCISW2/typing_test_v2/tutor_v2.vhf".
+WARNING:Xst:646 - Signal <XLXN_1186> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <tutor_v2> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 8-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <XLXI_379/State/FSM> on signal <State[1:2]> with user encoding.
+--------------------------------
+ State              | Encoding
+--------------------------------
+ sreadfromsd        | 00
+ sreadfromsdrdy     | 01
+ sreadfromsdendbyte | 10
+ sreadfromkbd       | 11
+--------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_3/State/FSM> on signal <State[1:3]> with gray encoding.
+--------------------
+ State  | Encoding
+--------------------
+ sreset | 000
+ sready | 001
+ swaith | 011
+ ssendh | 010
+ swaitl | 110
+ ssendl | 111
+--------------------
+Reading core <../testy/PS2_Kbd/PS2_Kbd.ngc>.
+Reading core <../typing_tutor/typing_tutor/VGAtxt48x20/VGAtxt48x20.ngc>.
+Reading core <../testy/SDC_FileReader/SDC_FileReader.ngc>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_1>.
+Loading core <VGAtxt48x20> for timing and area information for instance <XLXI_42>.
+Loading core <SDC_FileReader> for timing and area information for instance <XLXI_52>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <tutor_v2> ...
+
+Optimizing unit <state_machine> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block tutor_v2, actual ratio is 20.
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_11> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/State_11_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_15> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/State_15_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/SpC_1> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/SpC_1_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_11> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/State_11_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/State_15> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/State_15_1> 
+INFO:Xst:2260 - The FF/Latch <XLXI_94/SpC_1> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/SpC_1_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : tutor_v2.ngr
+Top Level Output File Name         : tutor_v2
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 2412
+#      AND2                        : 1
+#      AND3                        : 4
+#      AND3B1                      : 4
+#      AND3B2                      : 1
+#      BUF                         : 7
+#      GND                         : 4
+#      INV                         : 58
+#      LUT1                        : 131
+#      LUT2                        : 234
+#      LUT2_D                      : 9
+#      LUT2_L                      : 25
+#      LUT3                        : 292
+#      LUT3_D                      : 9
+#      LUT3_L                      : 13
+#      LUT4                        : 734
+#      LUT4_D                      : 67
+#      LUT4_L                      : 94
+#      MULT_AND                    : 10
+#      MUXCY                       : 307
+#      MUXF5                       : 82
+#      MUXF5_L                     : 2
+#      MUXF6                       : 15
+#      OR2                         : 7
+#      VCC                         : 4
+#      XOR2                        : 1
+#      XORCY                       : 297
+# FlipFlops/Latches                : 618
+#      FD                          : 115
+#      FDC                         : 3
+#      FDE                         : 178
+#      FDR                         : 37
+#      FDRE                        : 142
+#      FDRS                        : 5
+#      FDRSE                       : 3
+#      FDS                         : 132
+#      FDSE                        : 3
+# RAMS                             : 3
+#      RAMB16_S9                   : 1
+#      RAMB16_S9_S9                : 2
+# Shift Registers                  : 3
+#      SRL16                       : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 8
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      944  out of   4656    20%  
+ Number of Slice Flip Flops:            618  out of   9312     6%  
+ Number of 4 input LUTs:               1669  out of   9312    17%  
+    Number used as logic:              1666
+    Number used as Shift registers:       3
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
+ Number of BRAMs:                         3  out of     20    15%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 624   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------+-------+
+Control Signal                     | Buffer(FF name)            | Load  |
+-----------------------------------+----------------------------+-------+
+XLXN_1114(XLXI_369:G)              | NONE(XLXI_3/State_FSM_FFd1)| 3     |
+-----------------------------------+----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.690ns (Maximum Frequency: 85.543MHz)
+   Minimum input arrival time before clock: 9.038ns
+   Maximum output required time after clock: 10.403ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 11.690ns (frequency: 85.543MHz)
+  Total number of paths / destination ports: 64896 / 1320
+-------------------------------------------------------------------------
+Delay:               11.690ns (Levels of Logic = 36)
+  Source:            XLXI_52/XLXI_94/State_21 (FF)
+  Destination:       XLXI_52/XLXI_94/adrSec_31 (FF)
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: XLXI_52/XLXI_94/State_21 to XLXI_52/XLXI_94/adrSec_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             79   0.591   1.452  XLXI_94/State_21 (XLXI_94/State<21>)
+     LUT2_D:I0->O         11   0.704   0.937  XLXI_94/adrSec_or00001 (XLXI_94/adrSec_or0000)
+     LUT4_D:I3->O         17   0.704   1.055  XLXI_94/adrSec_mux0005<25>25 (XLXI_94/N61)
+     LUT4:I3->O            1   0.704   0.424  XLXI_94/adrSec_mux0005<30>1 (XLXI_94/adrSec_mux0005<30>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_94/Madd_adrSec_share0000_lut<1> (XLXI_94/Madd_adrSec_share0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_94/Madd_adrSec_share0000_cy<1> (XLXI_94/Madd_adrSec_share0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<2> (XLXI_94/Madd_adrSec_share0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<3> (XLXI_94/Madd_adrSec_share0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<4> (XLXI_94/Madd_adrSec_share0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<5> (XLXI_94/Madd_adrSec_share0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<6> (XLXI_94/Madd_adrSec_share0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<7> (XLXI_94/Madd_adrSec_share0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<8> (XLXI_94/Madd_adrSec_share0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<9> (XLXI_94/Madd_adrSec_share0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<10> (XLXI_94/Madd_adrSec_share0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<11> (XLXI_94/Madd_adrSec_share0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<12> (XLXI_94/Madd_adrSec_share0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<13> (XLXI_94/Madd_adrSec_share0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<14> (XLXI_94/Madd_adrSec_share0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<15> (XLXI_94/Madd_adrSec_share0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<16> (XLXI_94/Madd_adrSec_share0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<17> (XLXI_94/Madd_adrSec_share0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<18> (XLXI_94/Madd_adrSec_share0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<19> (XLXI_94/Madd_adrSec_share0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<20> (XLXI_94/Madd_adrSec_share0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<21> (XLXI_94/Madd_adrSec_share0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<22> (XLXI_94/Madd_adrSec_share0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<23> (XLXI_94/Madd_adrSec_share0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<24> (XLXI_94/Madd_adrSec_share0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<25> (XLXI_94/Madd_adrSec_share0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<26> (XLXI_94/Madd_adrSec_share0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<27> (XLXI_94/Madd_adrSec_share0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<28> (XLXI_94/Madd_adrSec_share0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<29> (XLXI_94/Madd_adrSec_share0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_94/Madd_adrSec_share0000_cy<30> (XLXI_94/Madd_adrSec_share0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.424  XLXI_94/Madd_adrSec_share0000_xor<31> (XLXI_94/adrSec_share0000<31>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_94/adrSec_mux0004<31>23 (XLXI_94/adrSec_mux0004<31>23)
+     FDS:D                     0.308          XLXI_94/adrSec_31
+    ----------------------------------------
+    Total                     11.690ns (7.398ns logic, 4.292ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 40 / 36
+-------------------------------------------------------------------------
+Offset:              9.038ns (Levels of Logic = 9)
+  Source:            SW_1 (PAD)
+  Destination:       XLXI_52/XLXI_94/State_23 (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: SW_1 to XLXI_52/XLXI_94/State_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  SW_1_IBUF (SW_1_IBUF)
+     BUF:I->O              1   0.704   0.595  XLXI_44 (FName<1>)
+     begin scope: 'XLXI_52'
+     LUT4:I0->O            1   0.704   0.455  XLXI_94/NextState_and001032 (XLXI_94/NextState_and001032)
+     LUT4:I2->O            2   0.704   0.482  XLXI_94/NextState_and0010179_SW0 (N428)
+     LUT4_L:I2->LO         1   0.704   0.104  XLXI_94/State_mux0002<8>125_SW0_SW0_SW0_SW0 (N552)
+     LUT4:I3->O            1   0.704   0.424  XLXI_94/State_mux0002<8>125_SW0_SW0_SW0 (N548)
+     LUT4_L:I3->LO         1   0.704   0.104  XLXI_94/State_mux0002<8>125_SW0_SW0 (N400)
+     LUT4:I3->O            1   0.704   0.000  XLXI_94/State_mux0002<8>1791 (XLXI_94/State_mux0002<8>179)
+     FDS:D                     0.308          XLXI_94/State_23
+    ----------------------------------------
+    Total                      9.038ns (6.454ns logic, 2.584ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 27 / 11
+-------------------------------------------------------------------------
+Offset:              10.403ns (Levels of Logic = 7)
+  Source:            XLXI_52/XLXI_89/cntBytes_5 (FF)
+  Destination:       LED_7 (PAD)
+  Source Clock:      Clk_50MHz rising
+
+  Data Path: XLXI_52/XLXI_89/cntBytes_5 to LED_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.591   0.706  XLXI_89/cntBytes_5 (XLXI_89/cntBytes<5>)
+     LUT2_L:I0->LO         1   0.704   0.104  XLXI_89/Full512_mux0000212 (XLXI_89/Full512_mux0000212)
+     LUT4:I3->O            2   0.704   0.451  XLXI_89/Full512_mux0000217 (XLXI_89/Full512_mux0000217)
+     LUT4_D:I3->O          5   0.704   0.808  XLXI_89/NextState_0_cmp_eq000011 (XLXI_89/N3)
+     LUT2:I0->O            1   0.704   0.420  XLXI_89/NotEmpty1 (XLXN_647)
+     OR2:I0->O             3   0.704   0.531  XLXI_92 (Busy)
+     end scope: 'XLXI_52'
+     OBUF:I->O                 3.272          LED_7_OBUF (LED_7)
+    ----------------------------------------
+    Total                     10.403ns (7.383ns logic, 3.020ns route)
+                                       (71.0% logic, 29.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.46 secs
+ 
+--> 
+
+Total memory usage is 4564976 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
