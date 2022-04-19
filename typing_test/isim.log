@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\studia\UCISW2\typing_test_v2\state_machine_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/studia/UCISW2/typing_test_v2/state_machine_tb_isim_beh.wdb 
+Running: C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\typing_test\state_machine_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,6 +11,11 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 10.00us
+ERROR: Index 41 out of bound 1 to 40. 
+ERROR: In process state_machine.vhd:process4 
+ 
+INFO: Simulator is stopped.
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -19,3 +24,8 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 10.00us
+ERROR: Index 41 out of bound 1 to 40. 
+ERROR: In process state_machine.vhd:process4 
+ 
+INFO: Simulator is stopped.

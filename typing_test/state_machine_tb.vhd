@@ -141,20 +141,24 @@ BEGIN
 
 			SD_Busy <= '0';
 			ifSDReadingEnded <= '1';
-			wait; -- forever
+--			wait; -- forever
    end process;
 	
 	-- Proces dla symulacji klawiatury
    kbd_process: process
    begin	
---		if ifSDReadingEnded = '1' then
+		wait for 1 * CLK_period;
+		if ifSDReadingEnded = '1' then
 			for i in 21 downto 0 loop
 				PS2_DO <= testCharacterArray(i);
-				PS2_DO_Rdy <= '1';
+					PS2_DO_Rdy <= '1';
 				wait for CLK_period;
-				PS2_DO_Rdy <='0';
+					PS2_DO_Rdy <='0';
 				wait for 5 * CLK_period;
 			end loop;
---		end if;
+		else
+			PS2_DO <= "00000000";
+			PS2_DO_Rdy <= '0';
+		end if;
    end process;
 END;

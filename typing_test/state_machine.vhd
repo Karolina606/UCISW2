@@ -53,6 +53,8 @@ architecture Behavioral of state_machine is
 	type state_type is ( sReadFromSD, sReadFromSDRdy, sReadFromSDEndByte, sReadFromSDEnd, sReadFromKbd );
 	signal State, NextState : state_type;
 	signal CharNumber 		: positive;
+	signal CharNumberCheck 	: positive;
+	signal Score				: STD_LOGIC_VECTOR (7 downto 0) := "00000000";
 	signal Text					: string(1 to 40);
 
 begin
@@ -86,7 +88,7 @@ begin
 				NextState <= State;
 				
 			when sReadFromSDRdy =>
-				if SD_DO = X"0A" or SD_DO = X"0D" then
+				if SD_DO = X"0A" or SD_DO = X"0D" or SD_DO = X"00" then
 					NextState <= sReadFromSDEnd;
 				else 
 					NextState <= sReadFromSDEndByte;
@@ -133,6 +135,20 @@ begin
 			end case;
 		end if;
 	end process process3;
+	
+	------------------ PROCES LICZ¥CY PUNKTY -------------------------
+	process4 : process( Clk )
+	begin
+		if rising_edge( Clk ) and State = sReadFromKbd and PS2_DO_Rdy = '1' then
+			if character'val(to_integer(unsigned(PS2_DO))) = Text(CharNumberCheck) then
+				Score <= std_logic_vector(signed(Score) + 1);
+			else
+				Score <= std_logic_vector(signed(Score) - 1);
+			end if;
+			
+			CharNumberCheck <= CharNumberCheck + 1;
+		end if;
+	end process process4;
 
 
 	-- In place of process3:
