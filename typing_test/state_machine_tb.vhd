@@ -55,7 +55,6 @@ ARCHITECTURE behavior OF state_machine_tb IS
          SD_Pop : OUT  std_logic
         );
     END COMPONENT;
-    
 
    --Inputs
    signal Clk : std_logic := '0';
@@ -107,6 +106,7 @@ BEGIN
           Char_WE => Char_WE,
           SD_Pop => SD_Pop
         );
+		  
 
    -- Clock process definitions
    Clk_process :process
@@ -141,13 +141,12 @@ BEGIN
 
 			SD_Busy <= '0';
 			ifSDReadingEnded <= '1';
---			wait; -- forever
    end process;
 	
 	-- Proces dla symulacji klawiatury
    kbd_process: process
    begin	
-		wait for 1 * CLK_period;
+		wait for 0.2 * CLK_period;
 		if ifSDReadingEnded = '1' then
 			for i in 21 downto 0 loop
 				PS2_DO <= testCharacterArray(i);

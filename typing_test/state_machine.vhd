@@ -50,12 +50,15 @@ end state_machine;
 
 architecture Behavioral of state_machine is
 
-	type state_type is ( sReadFromSD, sReadFromSDRdy, sReadFromSDEndByte, sReadFromSDEnd, sReadFromKbd );
+	type state_type is ( sReadFromSD, sReadFromSDRdy, sReadFromSDEndByte, sReadFromSDEnd, 
+								sReadFromKbd);
 	signal State, NextState : state_type;
 	signal CharNumber 		: positive;
 	signal CharNumberCheck 	: positive;
 	signal Score				: STD_LOGIC_VECTOR (7 downto 0) := "00000000";
-	signal Text					: string(1 to 40);
+	type byte_array			is array (1 to 40) of STD_LOGIC_VECTOR (7 downto 0);
+	signal Text					: byte_array;
+--	signal Text					: string(1 to 40);
 
 begin
 	process1 : process( Clk )
@@ -112,24 +115,30 @@ begin
 					
 				when sReadFromSDRdy =>
 					------------------------------- CZYTA Z KARTY -------------------------------
-					Char_DI <= SD_DO;
-					Char_WE <= '1';
+					if SD_DO /= X"0A" and SD_DO /= X"0D" and SD_DO /= X"00" then
+						Char_DI <= SD_DO;
+						Char_WE <= '1';
+						CharNumber <= CharNumber + 1;
+						Text(CharNumber) <= SD_DO;
+					end if;
 					SD_Pop <= '1';
-					CharNumber <= CharNumber + 1;
-					Text(CharNumber) <= character'val(to_integer(unsigned(SD_DO)));
+--					Text(CharNumber) <= character'val(to_integer(unsigned(SD_DO)));
 					
 				when sReadFromSDEndByte =>
 					Char_WE <= '0';
 					SD_Pop <= '0';
 					
 				when sReadFromSDEnd =>
+					Char_WE <= '0';
 					NewlineOut <= '1';
 				
 				----------------------------- CZYTA Z KLAWIATURY -----------------------------
 				when sReadFromKbd =>
 					NewlineOut <= '0';
-					Char_DI <= PS2_DO;
-					Char_WE <= PS2_DO_Rdy;
+					if PS2_DO /= X"0A" and PS2_DO /= X"0D" and PS2_DO /= X"00" then
+						Char_DI <= PS2_DO;
+						Char_WE <= PS2_DO_Rdy;
+					end if;
 					
 				when others =>
 			end case;
@@ -140,7 +149,8 @@ begin
 	process4 : process( Clk )
 	begin
 		if rising_edge( Clk ) and State = sReadFromKbd and PS2_DO_Rdy = '1' then
-			if character'val(to_integer(unsigned(PS2_DO))) = Text(CharNumberCheck) then
+--			if character'val(to_integer(unsigned(PS2_DO))) = Text(CharNumberCheck) then
+			if PS2_DO = Text(CharNumberCheck) then
 				Score <= std_logic_vector(signed(Score) + 1);
 			else
 				Score <= std_logic_vector(signed(Score) - 1);

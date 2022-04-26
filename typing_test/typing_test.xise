@@ -15,14 +15,17 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="FSM_SendByte.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../testy/Test_KbdVGA/Test_KbdVGA/GenIO.ucf" xil_pn:type="FILE_UCF"/>
-    <file xil_pn:name="../../testy/Test_KbdVGA/Test_KbdVGA/TBW_FSM_SendByte.vhd" xil_pn:type="FILE_VHDL"/>
-    <file xil_pn:name="../../testy/Test_KbdVGA/Test_KbdVGA/Test_KbdVGA.sch" xil_pn:type="FILE_SCHEMATIC"/>
-    <file xil_pn:name="../typing_tutor/VGAtxt48x20/VGAtxt48x20.ngc" xil_pn:type="FILE_NGC">
+    <file xil_pn:name="FSM_SendByte.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="../../testy/PS2_Kbd/PS2_Kbd.ngc" xil_pn:type="FILE_NGC"/>
+    <file xil_pn:name="../../testy/Test_KbdVGA/Test_KbdVGA/GenIO.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+    </file>
+    <file xil_pn:name="../../testy/Test_KbdVGA/Test_KbdVGA/TBW_FSM_SendByte.vhd" xil_pn:type="FILE_VHDL"/>
+    <file xil_pn:name="../../testy/Test_KbdVGA/Test_KbdVGA/Test_KbdVGA.sch" xil_pn:type="FILE_SCHEMATIC"/>
+    <file xil_pn:name="../../testy/PS2_Kbd/PS2_Kbd.ngc" xil_pn:type="FILE_NGC">
+      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
+    </file>
     <file xil_pn:name="../../testy/RotaryEnc/RotaryEnc.ngc" xil_pn:type="FILE_NGC"/>
     <file xil_pn:name="tutor.sch" xil_pn:type="FILE_SCHEMATIC">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
@@ -48,6 +51,14 @@
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="115"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="115"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="115"/>
+    </file>
+    <file xil_pn:name="../../testy/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="149"/>
+    </file>
+    <file xil_pn:name="../../testy/Test_VGAscan/Test_VGAscan/VGAscan.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="150"/>
     </file>
   </files>
 

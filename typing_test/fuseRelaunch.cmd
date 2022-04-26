@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine_tb_isim_beh.exe" -prj "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine_tb_beh.prj" "work.state_machine_tb" 
+-intstyle "ise" -incremental -o "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine_tb_isim_beh.exe" -prj "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine_tb_beh.prj" "state_machine_tb" 
