@@ -1,0 +1,16 @@
+ISim log file
+Running: C:\Users\nogac\Desktop\studejszyn\studejszyn_sem5\UCiSW\lab6\Test_VGAscan\Test_VGAscan\Tbw_VGAscan_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/nogac/Desktop/studejszyn/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Tbw_VGAscan_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 28 ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tbw_vgascan/I_Scanner/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 13249590100 ps(2): Note: A new frame saved in C:\Users\nogac\Desktop\studejszyn\studejszyn_sem5\UCiSW\lab6\Frame0.bmp (/tbw_vgascan/I_Scanner/).
+at 27102390100 ps(2): Note: A new frame saved in C:\Users\nogac\Desktop\studejszyn\studejszyn_sem5\UCiSW\lab6\Frame1.bmp (/tbw_vgascan/I_Scanner/).

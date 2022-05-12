@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/nogac/Desktop/studejszyn/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Tbw_VGAscan_isim_beh.exe" -prj "C:/Users/nogac/Desktop/studejszyn/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Tbw_VGAscan_beh.prj" "work.Tbw_VGAscan" 

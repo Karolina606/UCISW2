@@ -44,7 +44,8 @@ entity state_machine is
            Char_DI 	: out STD_LOGIC_VECTOR (7 downto 0);
            Char_WE 	: out STD_LOGIC;
 			  NewlineOut: out STD_LOGIC;
-			  SD_Pop 	: out  STD_LOGIC);
+			  SD_Pop 	: out  STD_LOGIC;
+			  Score_DI	: out STD_LOGIC_VECTOR (63 downto 0));
 			  
 end state_machine;
 
@@ -55,7 +56,7 @@ architecture Behavioral of state_machine is
 	signal State, NextState : state_type;
 	signal CharNumber 		: positive;
 	signal CharNumberCheck 	: positive;
-	signal Score				: STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+	signal Score				: STD_LOGIC_VECTOR (63 downto 0) := X"0000000000000000";
 	type byte_array			is array (1 to 40) of STD_LOGIC_VECTOR (7 downto 0);
 	signal Text					: byte_array;
 --	signal Text					: string(1 to 40);
@@ -138,6 +139,7 @@ begin
 					if PS2_DO /= X"0A" and PS2_DO /= X"0D" and PS2_DO /= X"00" then
 						Char_DI <= PS2_DO;
 						Char_WE <= PS2_DO_Rdy;
+						Score_DI <= Score;
 					end if;
 					
 				when others =>

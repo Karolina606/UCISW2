@@ -11,3 +11,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 10.00us
+ERROR: Index 41 out of bound 1 to 40. 
+ERROR: In process state_machine.vhd:process4 
+ 
+INFO: Simulator is stopped.

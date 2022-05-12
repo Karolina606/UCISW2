@@ -1,0 +1,5 @@
+vhdl work "VGAtxt48x20.vhd"
+vhdl work "FSM_String.vhd"
+vhdl work "VGAscan.vhd"
+vhdl work "Top_HelloOnVGA.vhf"
+vhdl work "Tbw_VGAscan.vhd"

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 Top_HelloOnVGA.ngc Top_HelloOnVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_HelloOnVGA_map.ncd Top_HelloOnVGA.ngd Top_HelloOnVGA.pcf 
+par -w -intstyle ise -ol high -t 1 Top_HelloOnVGA_map.ncd Top_HelloOnVGA.ncd Top_HelloOnVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top_HelloOnVGA.twx Top_HelloOnVGA.ncd -o Top_HelloOnVGA.twr Top_HelloOnVGA.pcf 

@@ -53,6 +53,8 @@
     <transform xil_pn:end_ts="1649147691" xil_pn:in_ck="9109742303553703012" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8728835935228750534" xil_pn:start_ts="1649147688">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="typing_tutor.vhf"/>
     </transform>
     <transform xil_pn:end_ts="1647531497" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3056505999503954931" xil_pn:start_ts="1647531497">
@@ -62,6 +64,7 @@
     <transform xil_pn:end_ts="1649147691" xil_pn:in_ck="-5179967897008519698" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1649147691">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="../../testy/Test_VGAscan/Test_VGAscan/VGAscan.vhd"/>
       <outfile xil_pn:name="../../testy/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd"/>
       <outfile xil_pn:name="typing_tutor.vhf"/>
@@ -71,6 +74,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>

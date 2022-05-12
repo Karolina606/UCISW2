@@ -52,7 +52,8 @@ ARCHITECTURE behavior OF state_machine_tb IS
          Char_DI : OUT  std_logic_vector(7 downto 0);
          Char_WE : OUT  std_logic;
 			NewlineOut : OUT std_logic;
-         SD_Pop : OUT  std_logic
+         SD_Pop : OUT  std_logic;
+			Score_DI	: OUT STD_LOGIC_VECTOR (63 downto 0)
         );
     END COMPONENT;
 
@@ -64,6 +65,7 @@ ARCHITECTURE behavior OF state_machine_tb IS
    signal SD_DO_Rdy : std_logic := '0';
    signal PS2_DO_Rdy : std_logic := '0';
    signal PS2_DO : std_logic_vector(7 downto 0) := (others => '0');
+	signal Score_DI : STD_LOGIC_VECTOR (63 downto 0) := (others => '0');
 
  	--Outputs
    signal Char_DI : std_logic_vector(7 downto 0);
@@ -104,7 +106,8 @@ BEGIN
           PS2_DO => PS2_DO,
           Char_DI => Char_DI,
           Char_WE => Char_WE,
-          SD_Pop => SD_Pop
+          SD_Pop => SD_Pop,
+			 Score_DI => Score_DI
         );
 		  
 

@@ -11,4 +11,5 @@ Char_WE
 NewlineOut
 SD_Pop
 =Char_DI[7:0]=
+=Score_DI[63:0]=
 [BiDir]

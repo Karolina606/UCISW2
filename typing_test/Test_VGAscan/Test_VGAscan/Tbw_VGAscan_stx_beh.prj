@@ -1,0 +1,4 @@
+vhdl isim_temp "VGAtxt48x20.vhd"
+vhdl isim_temp "FSM_String.vhd"
+vhdl isim_temp "VGAscan.vhd"
+vhdl isim_temp "Tbw_VGAscan.vhd"
