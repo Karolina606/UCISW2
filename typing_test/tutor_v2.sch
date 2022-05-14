@@ -63,7 +63,6 @@
         <signal name="SW_2" />
         <signal name="SW_3" />
         <signal name="XLXN_1207(63:0)" />
-        <signal name="XLXN_1208" />
         <signal name="LCD_E" />
         <signal name="LCD_RS" />
         <signal name="LCD_RW" />
@@ -182,7 +181,7 @@
             <line x2="0" y1="-160" y2="-160" x1="64" />
         </blockdef>
         <blockdef name="state_machine">
-            <timestamp>2022-5-12T16:5:36</timestamp>
+            <timestamp>2022-5-14T12:49:12</timestamp>
             <rect width="64" x="368" y="84" height="24" />
             <line x2="432" y1="96" y2="96" x1="368" />
             <line x2="432" y1="32" y2="32" x1="368" />

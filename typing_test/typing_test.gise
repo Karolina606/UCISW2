@@ -73,6 +73,13 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="simulation_sm_vgascan.vhf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="simulation_sm_vgascan_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="state_machine.prj"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="state_machine.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="state_machine.stx"/>
@@ -80,9 +87,7 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="state_machine.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="state_machine_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="state_machine_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="state_machine_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="state_machine_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="state_machine_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="state_machine_tb_stx_beh.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="test_kbdvga.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="test_kbdvga.bit" xil_pn:subbranch="FPGAConfiguration"/>
@@ -140,53 +145,64 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1652372868" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1652372868">
+    <transform xil_pn:end_ts="1652533790" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1652533790">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1652375022" xil_pn:in_ck="2603070962984938826" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1652375022">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Test_VGAscan/Test_VGAscan/VGAscan.vhd"/>
-      <outfile xil_pn:name="Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd"/>
-      <outfile xil_pn:name="state_machine.vhd"/>
-      <outfile xil_pn:name="state_machine_tb.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1652372868" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7098339810601260544" xil_pn:start_ts="1652372868">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1652374953" xil_pn:in_ck="1078202376373674609" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2602450747432600578" xil_pn:start_ts="1652374952">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="tutor_v2.vhf"/>
-      <outfile xil_pn:name="typing_tutor.vhf"/>
-    </transform>
-    <transform xil_pn:end_ts="1652372870" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8767585280759949370" xil_pn:start_ts="1652372870">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1652375022" xil_pn:in_ck="-2928489519131104885" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1652375022">
+    <transform xil_pn:end_ts="1652533937" xil_pn:in_ck="533192748653336949" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1652533937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Test_VGAscan/Test_VGAscan/VGAscan.vhd"/>
       <outfile xil_pn:name="Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd"/>
+      <outfile xil_pn:name="simulation_sm_vgascan_tb.vhd"/>
+      <outfile xil_pn:name="state_machine.vhd"/>
+      <outfile xil_pn:name="state_machine_tb.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1652533790" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7833348425101965312" xil_pn:start_ts="1652533790">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1652533792" xil_pn:in_ck="5136371179514581923" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1057503927059368446" xil_pn:start_ts="1652533790">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="simulation_sm_vgascan.vhf"/>
+      <outfile xil_pn:name="tutor_v2.vhf"/>
+      <outfile xil_pn:name="typing_tutor.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1652533792" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8767585280759949370" xil_pn:start_ts="1652533792">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1652533937" xil_pn:in_ck="-1368366853334360018" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1652533937">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="Test_VGAscan/Test_VGAscan/VGAscan.vhd"/>
+      <outfile xil_pn:name="Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd"/>
+      <outfile xil_pn:name="simulation_sm_vgascan.vhf"/>
+      <outfile xil_pn:name="simulation_sm_vgascan_tb.vhd"/>
       <outfile xil_pn:name="state_machine.vhd"/>
       <outfile xil_pn:name="state_machine_tb.vhd"/>
       <outfile xil_pn:name="tutor_v2.vhf"/>
       <outfile xil_pn:name="typing_tutor.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1652375025" xil_pn:in_ck="-2928489519131104885" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-8351702995779724574" xil_pn:start_ts="1652375022">
+    <transform xil_pn:end_ts="1652533945" xil_pn:in_ck="-1368366853334360018" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6622735406837154869" xil_pn:start_ts="1652533937">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="state_machine_tb_beh.prj"/>
-      <outfile xil_pn:name="state_machine_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1652375026" xil_pn:in_ck="5039114543329000656" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5824457407909339665" xil_pn:start_ts="1652375025">
+    <transform xil_pn:end_ts="1652533946" xil_pn:in_ck="-8780733875978225615" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5176405157173887486" xil_pn:start_ts="1652533945">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
@@ -194,7 +210,8 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="state_machine_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="simulation_sm_vgascan_simulation_sm_vgascan_sch_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1649164247" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1649164247">
       <status xil_pn:value="SuccessfullyRun"/>

@@ -1,0 +1,5 @@
+MODULE simulation_sm_vgascan
+	SUBMODULE state_machine
+		INSTANCE XLXI_385
+	SUBMODULE VGAtxt48x20
+		INSTANCE XLXI_384

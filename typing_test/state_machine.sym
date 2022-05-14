@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="state_machine">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2022-5-12T16:5:36</timestamp>
+    <timestamp>2022-5-14T12:49:12</timestamp>
     <pin polarity="Input" x="0" y="-480" name="Clk" />
     <pin polarity="Input" x="0" y="-416" name="Reset" />
     <pin polarity="Input" x="0" y="-352" name="SD_Busy" />

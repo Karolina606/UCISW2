@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : typing_tutor.vhf
--- /___/   /\     Timestamp : 04/05/2022 10:34:50
+-- /___/   /\     Timestamp : 05/12/2022 21:03:52
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

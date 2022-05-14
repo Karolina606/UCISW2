@@ -52,12 +52,12 @@ end state_machine;
 architecture Behavioral of state_machine is
 
 	type state_type is ( sReadFromSD, sReadFromSDRdy, sReadFromSDEndByte, sReadFromSDEnd, 
-								sReadFromKbd);
+								sReadFromKbd, sReadFromKbdEnd);
 	signal State, NextState : state_type;
 	signal CharNumber 		: positive;
 	signal CharNumberCheck 	: positive;
 	signal Score				: STD_LOGIC_VECTOR (63 downto 0) := X"0000000000000000";
-	type byte_array			is array (1 to 40) of STD_LOGIC_VECTOR (7 downto 0);
+	type byte_array			is array (1 to 340) of STD_LOGIC_VECTOR (7 downto 0);
 	signal Text					: byte_array;
 --	signal Text					: string(1 to 40);
 
@@ -74,7 +74,7 @@ begin
 	end process process1;
 		
 		
-	process2 : process( State, SD_Busy, SD_DO_Rdy )
+	process2 : process( State, SD_Busy, SD_DO_Rdy, PS2_DO )
 	begin
 		NextState <= State; -- by default
 		case State is
@@ -89,7 +89,11 @@ begin
 			
 			----------------------------- TO MO¯NA BY POMIN¥Æ -----------------------------
 			when sReadFromKbd =>
-				NextState <= State;
+				if PS2_DO = X"0a" or PS2_DO = X"0d" then
+					NextState <= sReadFromKbdEnd;
+				else 
+					NextState <= State;	
+				end if;
 				
 			when sReadFromSDRdy =>
 				if SD_DO = X"0A" or SD_DO = X"0D" or SD_DO = X"00" then
@@ -104,6 +108,8 @@ begin
 			when sReadFromSDEnd =>
 				NextState <= sReadFromKbd;
 				
+			when others =>
+				NextState <= State; 
 		end case;
 	end process process2;
 	

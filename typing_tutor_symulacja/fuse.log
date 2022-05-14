@@ -3,9 +3,9 @@ ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/../../testy/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd" into library work
+Parsing VHDL file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/../typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd" into library work
 Parsing VHDL file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/typing_tutor.vhf" into library work
-Parsing VHDL file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/../../testy/Test_VGAscan/Test_VGAscan/VGAscan.vhd" into library work
+Parsing VHDL file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/../typing_test/Test_VGAscan/Test_VGAscan/VGAscan.vhd" into library work
 Parsing VHDL file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/typing_tutor_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
@@ -53,8 +53,8 @@ Compiling architecture behavioral of entity typing_tutor [\typing_tutor:typing_t
 Compiling architecture simulational of entity VGAscan [\VGAscan("C:\\Users\\nogac\\Desk...]
 Compiling architecture behavioral of entity typing_tutor_typing_tutor_sch_tb
 Time Resolution for simulation is 1ps.
-Waiting for 16 sub-compilation(s) to finish...
+Waiting for 11 sub-compilation(s) to finish...
 Compiled 237 VHDL Units
 Built simulation executable C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor_symulacja/typing_tutor_typing_tutor_sch_tb_isim_beh.exe
-Fuse Memory Usage: 84836 KB
-Fuse CPU Usage: 2562 ms
+Fuse Memory Usage: 85576 KB
+Fuse CPU Usage: 1593 ms

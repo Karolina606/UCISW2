@@ -12,3 +12,6 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /typing_tutor_typing_tutor_sch_tb/I_Scanner/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
+# run 10.00ms
+# run 14.00ms
+at 13249590100 ps(2): Note: A new frame saved in C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\image0.bmp (/typing_tutor_typing_tutor_sch_tb/I_Scanner/).
