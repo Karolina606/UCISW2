@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue Apr 05 15:11:05 2022
+Mapped Date    : Tue May 17 15:38:30 2022
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
@@ -19,6 +19,11 @@ Xilinx software updates or new releases.
 ----------------------------------------------------------------------
 Mapping design into LUTs...
 Running directed packing...
+WARNING:Pack:1186 - One or more I/O components have conflicting property values.
+    For each occurrence, the system will use the property value attached to the
+   pad.  Otherwise, the system will use the first property value read.  To view
+   each occurrence, create a detailed map report (run map using the -detail
+   option).
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -28,30 +33,32 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           618 out of   9,312    6%
-  Number of 4 input LUTs:             1,522 out of   9,312   16%
+  Number of Slice Flip Flops:           882 out of   9,312    9%
+  Number of 4 input LUTs:             2,299 out of   9,312   24%
 Logic Distribution:
-  Number of occupied Slices:            962 out of   4,656   20%
-    Number of Slices containing only related logic:     962 out of     962 100%
-    Number of Slices containing unrelated logic:          0 out of     962   0%
+  Number of occupied Slices:          1,477 out of   4,656   31%
+    Number of Slices containing only related logic:   1,477 out of   1,477 100%
+    Number of Slices containing unrelated logic:          0 out of   1,477   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,655 out of   9,312   17%
-    Number used as logic:             1,519
-    Number used as a route-thru:        133
-    Number used as Shift registers:       3
+  Total Number of 4 input LUTs:       2,476 out of   9,312   26%
+    Number used as logic:             1,942
+    Number used as a route-thru:        177
+    Number used for Dual Port RAMs:     352
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:       5
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 20 out of     232    8%
+  Number of bonded IOBs:                 29 out of     232   12%
   Number of RAMB16s:                      3 out of      20   15%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.33
+Average Fanout of Non-Clock Nets:                3.68
 
-Peak Memory Usage:  4420 MB
+Peak Memory Usage:  4436 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 

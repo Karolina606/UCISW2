@@ -1,0 +1,32 @@
+V3 51
+FL C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd 2022/05/17.14:25:21 P.20131013
+EN work/FSM_SendByte 1652794534 FL C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/FSM_SendByte/RTL 1652794535 \
+      FL C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd EN work/FSM_SendByte 1652794534
+FL C:/ucisw2/ucisw2/typing_test/state_machine.vhd 2022/05/17.15:35:24 P.20131013
+EN work/state_machine 1652794536 \
+      FL C:/ucisw2/ucisw2/typing_test/state_machine.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/state_machine/Behavioral 1652794537 \
+      FL C:/ucisw2/ucisw2/typing_test/state_machine.vhd EN work/state_machine 1652794536
+FL C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd 2022/05/17.08:07:30 P.20131013
+EN work/VGAtxt48x20 1652794538 \
+      FL C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/VGAtxt48x20/STRUCTURE 1652794539 \
+      FL C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd \
+      EN work/VGAtxt48x20 1652794538 CP FD CP LUT2 CP MUXCY CP XORCY CP LUT4 CP VCC \
+      CP OR2 CP GND CP FDE CP FDRE CP FDR CP FDSE CP MUXF5 CP MUXF6 CP AND2 CP XOR2 \
+      CP LUT3 CP LUT1 CP INV CP RAMB16_S9 CP RAMB16_S9_S9 CP LUT2_L CP LUT4_L CP LUT3_L \
+      CP LUT4_D CP SRL16 CP MUXF5_L CP AND3B1 CP AND3
+FL C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf 2022/05/17.15:32:26 P.20131013
+EN work/tutor_v2 1652794540 FL C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/tutor_v2/BEHAVIORAL 1652794541 \
+      FL C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf EN work/tutor_v2 1652794540 \
+      CP PS2_Kbd CP AND3B2 CP FSM_SendByte CP GND CP VCC CP BUF CP SDC_FileReader \
+      CP state_machine CP OR2 CP LCD1x64 CP VGAtxt48x20 CP RotaryEnc

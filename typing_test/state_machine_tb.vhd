@@ -125,7 +125,7 @@ BEGIN
    process
 
       type t_FileOfCharacter is file of character;
-      file fTheFile : t_FileOfCharacter is in "C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\1.txt";
+      file fTheFile : t_FileOfCharacter is in "C:\ucisw2\ucisw2\1.txt";
       variable byte : character;
 
 		begin

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=E:\studia\UCISW2\typing_test_v2\tutor_v2.ncd
-OUTFILE=E:\studia\UCISW2\typing_test_v2\tutor_v2.bit
+INFILE=C:\ucisw2\ucisw2\typing_test\tutor_v2.ncd
+OUTFILE=C:\ucisw2\ucisw2\typing_test\tutor_v2.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=E:\studia\UCISW2\typing_test_v2
+WORKINGDIR=C:\ucisw2\ucisw2\typing_test
 LICENSE=ISE
 USER_INFO=174693031_177724690_210736902_847

@@ -1,0 +1,8 @@
+EN tutor_v2 NULL C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf sub00/vhpl06 1652794540
+AR fsm_sendbyte rtl C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd sub00/vhpl01 1652794535
+EN fsm_sendbyte NULL C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd sub00/vhpl00 1652794534
+AR state_machine behavioral C:/ucisw2/ucisw2/typing_test/state_machine.vhd sub00/vhpl03 1652794537
+EN vgatxt48x20 NULL C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl04 1652794538
+EN state_machine NULL C:/ucisw2/ucisw2/typing_test/state_machine.vhd sub00/vhpl02 1652794536
+AR tutor_v2 behavioral C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf sub00/vhpl07 1652794541
+AR vgatxt48x20 structure C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl05 1652794539

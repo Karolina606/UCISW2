@@ -9,35 +9,37 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue Apr 05 15:11:05 2022
+Mapped Date    : Tue May 17 15:38:30 2022
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           618 out of   9,312    6%
-  Number of 4 input LUTs:             1,522 out of   9,312   16%
+  Number of Slice Flip Flops:           882 out of   9,312    9%
+  Number of 4 input LUTs:             2,299 out of   9,312   24%
 Logic Distribution:
-  Number of occupied Slices:            962 out of   4,656   20%
-    Number of Slices containing only related logic:     962 out of     962 100%
-    Number of Slices containing unrelated logic:          0 out of     962   0%
+  Number of occupied Slices:          1,477 out of   4,656   31%
+    Number of Slices containing only related logic:   1,477 out of   1,477 100%
+    Number of Slices containing unrelated logic:          0 out of   1,477   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,655 out of   9,312   17%
-    Number used as logic:             1,519
-    Number used as a route-thru:        133
-    Number used as Shift registers:       3
+  Total Number of 4 input LUTs:       2,476 out of   9,312   26%
+    Number used as logic:             1,942
+    Number used as a route-thru:        177
+    Number used for Dual Port RAMs:     352
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:       5
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 20 out of     232    8%
+  Number of bonded IOBs:                 29 out of     232   12%
   Number of RAMB16s:                      3 out of      20   15%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.33
+Average Fanout of Non-Clock Nets:                3.68
 
-Peak Memory Usage:  4420 MB
+Peak Memory Usage:  4436 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 
@@ -83,31 +85,83 @@ Section 2 - Warnings
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
+WARNING:Pack:1186 - One or more I/O components have conflicting property values.
+    For each occurrence, the system will use the property value attached to the
+   pad.  Otherwise, the system will use the first property value read.  To view
+   each occurrence, create a detailed map report (run map using the -detail
+   option).
 
 Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:LIT:243 - Logical network N166 has no load.
+INFO:LIT:395 - The above info message is repeated 182 more times for the
+   following (max. 5 shown):
+   N167,
+   N168,
+   N169,
+   XLXI_379/Mram_Text176/SPO,
+   XLXI_379/Mram_Text175/SPO
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
-INFO:LIT:244 - All of the single ended outputs in this design are using slew
-   rate limited output drivers. The delay on speed critical single ended outputs
-   can be dramatically reduced by designating them as fast outputs.
+INFO:MapLib:159 - Net Timing constraints on signal Clk_50MHz are pushed forward
+   through input buffer.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  19 block(s) optimized away
+   3 block(s) removed
+  30 block(s) optimized away
+   3 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_382/genIOBUF[0].instIOBUF/O" is sourceless and has been
+removed.
+The signal "XLXI_382/genIOBUF[1].instIOBUF/O" is sourceless and has been
+removed.
+The signal "XLXI_382/genIOBUF[2].instIOBUF/O" is sourceless and has been
+removed.
+Unused block "XLXI_382/genIOBUF[0].instIOBUF/IBUF" (BUF) removed.
+Unused block "XLXI_382/genIOBUF[1].instIOBUF/IBUF" (BUF) removed.
+Unused block "XLXI_382/genIOBUF[2].instIOBUF/IBUF" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XLXI_1/XST_GND
 VCC 		XLXI_1/XST_VCC
+GND 		XLXI_138
 VCC 		XLXI_204
-GND 		XLXI_369
-GND 		XLXI_42/XLXI_141
-VCC 		XLXI_42/XLXI_93
-BUF 		XLXI_45
+LUT3 		XLXI_382/Mmux_Blank_mux0000_5
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_6
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_61
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_62
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_7
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_71
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_72
+   optimized to 0
+LUT3 		XLXI_382/Mmux_Blank_mux0000_8
+   optimized to 0
+GND 		XLXI_382/XST_GND
+VCC 		XLXI_382/XST_VCC
+GND 		XLXI_385/XST_GND
+VCC 		XLXI_385/XST_VCC
 LUT2_L 		XLXI_52/XLXI_94/NextState_cmp_ne000812
    optimized to 0
 LOCALBUF 		XLXI_52/XLXI_94/NextState_cmp_ne000812/LUT2_L_BUF
@@ -133,26 +187,35 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Clk_50MHz                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| LED<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| LED<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| LED_7                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| PS2_Clk                            | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| PS2_Data                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| SDC_MISO                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| SDC_MOSI                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| SDC_SCK                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| SDC_SS                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| SW_0                               | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| SW_1                               | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| SW_2                               | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| VGA_B                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_G                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_HS                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_R                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VGA_VS                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| btn_north                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| btn_west                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| Clk_50MHz                          | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| LCD_D<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<3>                           | IOB              | BIDIR     | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_E                              | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_RS                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_RW                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LED<0>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| LED<1>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| LED_7                              | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| PS2_Clk                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| PS2_Data                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| ROT_A                              | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| ROT_B                              | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SDC_MISO                           | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| SDC_MOSI                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SDC_SCK                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SDC_SS                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          | 0 / 0    |
+| SF_CE                              | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| SW_0                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SW_1                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SW_2                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| SW_3                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| VGA_B                              | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| VGA_G                              | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| VGA_HS                             | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| VGA_R                              | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
+| VGA_VS                             | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

@@ -15,7 +15,7 @@ run
 -rtlview Yes
 -glob_opt AllClockNets
 -read_cores YES
--sd {"../typing_tutor/typing_tutor/VGAtxt48x20" "../testy/PS2_Kbd" "../testy/RotaryEnc" "../testy/SDC_FileReader"  }
+-sd {"PS2_Kbd" "RotaryEnc" "SDC_FileReader" "LCD1x64" "VGAtxt48x20"  }
 -write_timing_constraints NO
 -cross_clock_analysis NO
 -hierarchy_separator /

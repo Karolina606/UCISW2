@@ -51,7 +51,7 @@ end state_machine;
 
 architecture Behavioral of state_machine is
 
-	type state_type is ( sReadFromSD, sReadFromSDRdy, sReadFromSDEndByte, sReadFromSDEnd, 
+	type state_type is ( sWaitingForStart, sReadFromSD, sReadFromSDRdy, sReadFromSDEndByte, sReadFromSDEnd, 
 								sReadFromKbd, sReadFromKbdEnd);
 	signal State, NextState : state_type;
 	signal CharNumber 		: positive;
@@ -66,7 +66,7 @@ begin
 	begin
 		if rising_edge( Clk ) then
 			if Reset = '1' then
-				State <= sReadFromSD;
+				State <= sWaitingForStart;
 			else
 				State <= NextState;
 			end if;
@@ -74,10 +74,14 @@ begin
 	end process process1;
 		
 		
-	process2 : process( State, SD_Busy, SD_DO_Rdy, PS2_DO )
+	process2 : process( State, SD_Busy, SD_DO_Rdy, PS2_DO, SD_DO )
 	begin
 		NextState <= State; -- by default
 		case State is
+			when sWaitingForStart => 
+				if SD_DO_Rdy = '1' then
+					NextState <= sReadFromSD;
+				end if;
 			when sReadFromSD =>
 				if SD_DO_Rdy = '1' then
 					NextState <= sReadFromSDRdy;
@@ -117,6 +121,11 @@ begin
 	begin
 		if rising_edge( Clk ) then
 			case State is
+				when sWaitingForStart => 
+					NewlineOut <= '0';
+					Char_WE <= '0';
+					SD_Pop <= '0';
+				
 				when sReadFromSD =>
 					NewlineOut <= '0';
 					
