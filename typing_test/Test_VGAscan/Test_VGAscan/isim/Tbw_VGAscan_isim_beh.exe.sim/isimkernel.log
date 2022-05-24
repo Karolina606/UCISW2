@@ -1,0 +1,29 @@
+Command line:
+   Tbw_VGAscan_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56500
+
+Wed Mar 09 13:02:24 2022
+
+
+ Elaboration Time: 0.109375 sec
+
+ Current Memory Usage: 5165.95 Meg
+
+ Total Signals          : 2228
+ Total Nets             : 740
+ Total Signal Drivers   : 629
+ Total Blocks           : 512
+ Total Primitive Blocks : 507
+ Total Processes        : 623
+ Total Traceable Variables  : 847
+ Total Scalar Nets and Variables : 585434
+Total Line Count : 2374
+
+ Total Simulation Time: 48.4844 sec
+
+ Current Memory Usage: 5008.67 Meg
+
+Wed Mar 09 13:03:33 2022
+

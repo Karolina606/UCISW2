@@ -1,0 +1,6 @@
+EN top_helloonvga NULL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.vhf sub00/vhpl04 1641830488
+EN fsm_string NULL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/FSM_String.vhd sub00/vhpl00 1641830484
+AR top_helloonvga behavioral C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.vhf sub00/vhpl05 1641830489
+EN vgatxt48x20 NULL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl02 1641830486
+AR fsm_string rtl C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/FSM_String.vhd sub00/vhpl01 1641830485
+AR vgatxt48x20 structure C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl03 1641830487

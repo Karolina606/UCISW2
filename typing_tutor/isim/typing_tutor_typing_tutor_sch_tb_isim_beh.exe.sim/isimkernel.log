@@ -1,0 +1,29 @@
+Command line:
+   typing_tutor_typing_tutor_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61510
+
+Wed Mar 16 12:59:40 2022
+
+
+ Elaboration Time: 0.328125 sec
+
+ Current Memory Usage: 5165.41 Meg
+
+ Total Signals          : 2278
+ Total Nets             : 755
+ Total Signal Drivers   : 645
+ Total Blocks           : 529
+ Total Primitive Blocks : 524
+ Total Processes        : 635
+ Total Traceable Variables  : 845
+ Total Scalar Nets and Variables : 585417
+Total Line Count : 2374
+
+ Total Simulation Time: 0.390625 sec
+
+ Current Memory Usage: 5479.99 Meg
+
+Wed Mar 16 13:00:22 2022
+

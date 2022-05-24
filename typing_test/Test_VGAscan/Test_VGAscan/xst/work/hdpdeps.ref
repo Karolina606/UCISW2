@@ -1,0 +1,26 @@
+V3 41
+FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/FSM_String.vhd 2021/04/19.17:56:08 P.20131013
+EN work/FSM_String 1641830484 \
+      FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/FSM_String.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/FSM_String/RTL 1641830485 \
+      FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/FSM_String.vhd \
+      EN work/FSM_String 1641830484
+FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.vhf 2022/01/10.17:01:21 P.20131013
+EN work/Top_HelloOnVGA 1641830488 \
+      FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/Top_HelloOnVGA/BEHAVIORAL 1641830489 \
+      FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/Top_HelloOnVGA.vhf \
+      EN work/Top_HelloOnVGA 1641830488 CP FSM_String CP VGAtxt48x20 CP GND CP VCC
+FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd 2021/04/19.21:04:32 P.20131013
+EN work/VGAtxt48x20 1641830486 \
+      FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/VGAtxt48x20/STRUCTURE 1641830487 \
+      FL C:/Users/nogac/Desktop/studejszyn_sem5/UCiSW/lab6/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd \
+      EN work/VGAtxt48x20 1641830486 CP FD CP LUT2 CP MUXCY CP XORCY CP LUT4 CP VCC \
+      CP OR2 CP GND CP FDE CP FDRE CP FDR CP FDSE CP MUXF5 CP MUXF6 CP AND2 CP XOR2 \
+      CP LUT3 CP LUT1 CP INV CP RAMB16_S9 CP RAMB16_S9_S9 CP LUT2_L CP LUT4_L CP LUT3_L \
+      CP LUT4_D CP SRL16 CP MUXF5_L CP AND3B1 CP AND3

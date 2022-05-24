@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Mar 17 15:39:17 2022
+# Process ID: 18016
+# Log file: C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/pa.fromNetlist.tcl
+# create_project -name typing_tutor -dir "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/planAhead_run_2" -part xc3s500efg320-4
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/planAhead_run_2/typing_tutor.ppr
+     C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/planAhead_run_2/typing_tutor.data
+
+    while executing
+"create_project -name typing_tutor -dir "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/planAhead_run_2" -part xc3s500efg320-4"
+    (file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_tutor/pa.fromNetlist.tcl" line 4)
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Thu Mar 17 15:39:29 2022...
+INFO: [Common 17-83] Releasing license: PlanAhead

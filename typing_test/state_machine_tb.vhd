@@ -42,56 +42,67 @@ ARCHITECTURE behavior OF state_machine_tb IS
  
     COMPONENT state_machine
     PORT(
-         Clk : IN  std_logic;
+         Clk 	: IN  std_logic;
          Reset : IN  std_logic;
          SD_DO : IN  std_logic_vector(7 downto 0);
-         SD_Busy : IN  std_logic;
-         SD_DO_Rdy : IN  std_logic;
-         PS2_DO_Rdy : IN  std_logic;
-         PS2_DO : IN  std_logic_vector(7 downto 0);
-         Char_DI : OUT  std_logic_vector(7 downto 0);
-         Char_WE : OUT  std_logic;
-			NewlineOut : OUT std_logic;
-         SD_Pop : OUT  std_logic;
-			Score_DI	: OUT STD_LOGIC_VECTOR (63 downto 0)
+         SD_Busy 		: IN  std_logic;
+         SD_DO_Rdy 	: IN  std_logic;
+         PS2_DO_Rdy 	: IN  std_logic;
+         PS2_DO 		: IN  std_logic_vector(7 downto 0);
+         Char_DI 		: OUT  std_logic_vector(7 downto 0);
+         Char_WE 		: OUT  std_logic;
+			NewlineOut 	: OUT std_logic;
+         SD_Pop 		: OUT  std_logic;
+			Score_DI		: OUT STD_LOGIC_VECTOR (63 downto 0)
         );
     END COMPONENT;
 
    --Inputs
-   signal Clk : std_logic := '0';
-   signal Reset : std_logic := '0';
-   signal SD_DO : std_logic_vector(7 downto 0) := (others => '0');
+   signal Clk 		: std_logic := '0';
+   signal Reset 	: std_logic := '0';
+   signal SD_DO 	: std_logic_vector(7 downto 0) := (others => '0');
    signal SD_Busy : std_logic := '0';
-   signal SD_DO_Rdy : std_logic := '0';
+   signal SD_DO_Rdy 	: std_logic := '0';
    signal PS2_DO_Rdy : std_logic := '0';
-   signal PS2_DO : std_logic_vector(7 downto 0) := (others => '0');
-	signal Score_DI : STD_LOGIC_VECTOR (63 downto 0) := (others => '0');
+   signal PS2_DO 		: std_logic_vector(7 downto 0) := (others => '0');
+	signal Score_DI 	: STD_LOGIC_VECTOR (63 downto 0) := (others => '0');
 
  	--Outputs
    signal Char_DI : std_logic_vector(7 downto 0);
    signal Char_WE : std_logic;
-   signal SD_Pop : std_logic;
+   signal SD_Pop 	: std_logic;
 
    -- Clock period definitions
    constant Clk_period : time := 10 ns;
 	
 	signal ifSDReadingEnded: std_logic := '0';
+	signal ifKBDReadingEnded: std_logic := '1';
+	
+	
+	-- States
+	type state_type is ( sSD, sKBD );
+	signal State, NextState : state_type;
+	
+	
+	signal read_byte: std_logic_vector(7 downto 0);
 	
 	
 	-- Kbd
-	type charArray is array (21 downto 0) of STD_LOGIC_VECTOR( 7 downto 0 );
+	signal kbdIndex : positive;
+	type charArray is array (1 to 25) of STD_LOGIC_VECTOR( 7 downto 0 );
 	constant testCharacterArray : charArray := 
 	( X"41", X"6c", X"61",
 	X"20",
 	X"6d", X"61",
 	X"20", 
 	X"6b", X"6f", X"74", X"61", 
+	X"0D", X"0A",
 	
-	X"41", X"6c", X"61",
+	X"54", X"6F", X"6D", X"65", X"6B",
 	X"20",
 	X"6d", X"61",
 	X"20", 
-	X"6b", X"6f", X"74", X"61");
+	X"70", X"73",X"61");
  
 BEGIN
  
@@ -119,13 +130,40 @@ BEGIN
 		Clk <= '1';
 		wait for Clk_period/2;
    end process;
+	
+	
+	process1 : process( Clk )
+	begin
+		if rising_edge( Clk ) then
+			if Reset = '1' then
+				State <= sSD;
+			else
+				State <= NextState;
+			end if;
+		end if;
+	end process process1;
+	
+	process2 : process( State, ifSDReadingEnded, ifKBDReadingEnded)
+	begin
+		NextState <= State; -- by default
+		case State is
+			when sSD => 
+				if ifSDReadingEnded = '1' then
+					NextState <= sKBD;
+				end if;
+			when sKBD =>
+				if ifKBDReadingEnded = '1' then
+					NextState <= sSD;
+				end if;
+		end case;
+	end process process2;
 
 
 	-- Proces symulacyjny dla czytania z karty
    process
 
       type t_FileOfCharacter is file of character;
-      file fTheFile : t_FileOfCharacter is in "C:\ucisw2\ucisw2\1.txt";
+      file fTheFile : t_FileOfCharacter is in "C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\1.txt";
       variable byte : character;
 
 		begin
@@ -133,31 +171,51 @@ BEGIN
 			
 			SD_Busy <= '1';
 			
-			while not endfile( fTheFile ) loop
-			  wait for Clk_Period * 3;    -- represents SDCard read delay
+			while not endfile( fTheFile ) and State = sSD and ifSDReadingEnded = '0' loop
+--			if not endfile( fTheFile ) and State = sSD then
+			  wait for Clk_Period * 2;    -- represents SDCard read delay
 			  read( fTheFile, byte );
+			  
+			  read_byte <= std_logic_vector( to_unsigned( character'pos( byte ) , 8 ) );
 			  SD_DO <= std_logic_vector( to_unsigned( character'pos( byte ) , 8 ) );
 			  SD_DO_Rdy <= '1';
 			  wait until rising_edge( Clk ) and SD_Pop = '1';
 			  SD_DO_Rdy <= '0';
+			  
+			  if SD_DO = X"0D" then
+					ifSDReadingEnded <= '1';
+			  else
+					ifSDReadingEnded <= '0';
+			  end if;
+			  
 			end loop;
 
-			SD_Busy <= '0';
-			ifSDReadingEnded <= '1';
+--			SD_Busy <= '0';
+--			ifSDReadingEnded <= '1';
    end process;
 	
 	-- Proces dla symulacji klawiatury
    kbd_process: process
    begin	
-		wait for 0.2 * CLK_period;
-		if ifSDReadingEnded = '1' then
-			for i in 21 downto 0 loop
-				PS2_DO <= testCharacterArray(i);
-					PS2_DO_Rdy <= '1';
-				wait for CLK_period;
-					PS2_DO_Rdy <='0';
-				wait for 5 * CLK_period;
-			end loop;
+		wait for 0.01 * Clk_Period;
+		
+		if State = sKBD and ifSDReadingEnded = '1' then
+			ifKBDReadingEnded <= '0';
+			PS2_DO <= testCharacterArray(kbdIndex);
+			PS2_DO_Rdy <= '1';
+			wait for CLK_period;
+			PS2_DO_Rdy <='0';
+			wait for 5 * CLK_period;
+			
+			kbdIndex <= kbdIndex + 1;
+			
+			if testCharacterArray(kbdIndex) = X"0D" then
+				ifKBDReadingEnded <= '1';
+				kbdIndex <= kbdIndex + 2;
+			else
+				ifKBDReadingEnded <= '0';
+			end if;
+			
 		else
 			PS2_DO <= "00000000";
 			PS2_DO_Rdy <= '0';
