@@ -1,8 +1,8 @@
-EN tutor_v2 NULL C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf sub00/vhpl06 1652794540
-AR fsm_sendbyte rtl C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd sub00/vhpl01 1652794535
-EN fsm_sendbyte NULL C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd sub00/vhpl00 1652794534
-AR state_machine behavioral C:/ucisw2/ucisw2/typing_test/state_machine.vhd sub00/vhpl03 1652794537
-EN vgatxt48x20 NULL C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl04 1652794538
-EN state_machine NULL C:/ucisw2/ucisw2/typing_test/state_machine.vhd sub00/vhpl02 1652794536
-AR tutor_v2 behavioral C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf sub00/vhpl07 1652794541
-AR vgatxt48x20 structure C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl05 1652794539
+EN tutor_v2 NULL C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf sub00/vhpl06 1653919740
+AR fsm_sendbyte rtl C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/FSM_SendByte.vhd sub00/vhpl01 1653919735
+EN fsm_sendbyte NULL C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/FSM_SendByte.vhd sub00/vhpl00 1653919734
+AR state_machine behavioral C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine.vhd sub00/vhpl03 1653919737
+EN vgatxt48x20 NULL C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl04 1653919738
+EN state_machine NULL C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine.vhd sub00/vhpl02 1653919736
+AR tutor_v2 behavioral C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf sub00/vhpl07 1653919741
+AR vgatxt48x20 structure C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd sub00/vhpl05 1653919739

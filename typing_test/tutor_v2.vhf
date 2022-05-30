@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : tutor_v2.vhf
--- /___/   /\     Timestamp : 05/17/2022 15:32:26
+-- /___/   /\     Timestamp : 05/30/2022 15:53:40
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/ucisw2/ucisw2/typing_test/PS2_Kbd -sympath C:/ucisw2/ucisw2/typing_test/RotaryEnc -sympath C:/ucisw2/ucisw2/typing_test/SDC_FileReader -sympath C:/ucisw2/ucisw2/typing_test/LCD1x64 -sympath C:/ucisw2/ucisw2/typing_test/VGAtxt48x20 -intstyle ise -family spartan3e -flat -suppress -vhdl C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf -w C:/ucisw2/ucisw2/typing_test/tutor_v2.sch
+--Command: sch2hdl -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/PS2_Kbd -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/RotaryEnc -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/SDC_FileReader -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/LCD1x64 -sympath C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/VGAtxt48x20 -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf -w C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.sch
 --Design Name: tutor_v2
 --Device: spartan3e
 --Purpose:

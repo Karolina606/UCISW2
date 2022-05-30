@@ -5,15 +5,15 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">N166</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">N158</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">182</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">N167,
-N168,
-N169,
-XLXI_379/Mram_Text176/SPO,
-XLXI_379/Mram_Text175/SPO</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">62</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">N159,
+N160,
+N161,
+XLXI_379/Mram_Text56/SPO,
+XLXI_379/Mram_Text55/SPO</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
@@ -24,6 +24,27 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="warning" file="Pack" num="1186" delta="old" >One or more I/O components have conflicting property values.  For each occurrence, the system will use the property value attached to the pad.  Otherwise, the system will use the first property value read.  To view each occurrence, create a detailed map report (run map using the -detail option).
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text49</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text49 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX_5 already uses G.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text50</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX1_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text50 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX1_5 already uses G.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text51</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX2_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text51 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX2_5 already uses G.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text52</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX3_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text52 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX3_5 already uses G.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text53</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX4_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text53 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX4_5 already uses G.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text54</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX5_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text54 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX5_5 already uses G.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_379/Mram_Text56</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_379/inst_LPM_MUX7_3_f5</arg>.  <arg fmt="%z" index="3">The function generator XLXI_379/Mram_Text56 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal XLXI_379/inst_LPM_MUX7_5 already uses G.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 </messages>

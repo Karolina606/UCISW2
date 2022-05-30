@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf
--ucf LCD.ucf -ucf GenIO.ucf -ucf USB_PS2_SDC.ucf
+-ucf USB_PS2_SDC.ucf -ucf LCD.ucf -ucf GenIO.ucf
 
 Design file:              tutor_v2.ncd
 Physical constraint file: tutor_v2.pcf
@@ -37,1619 +37,1568 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 3000052 paths analyzed, 5255 endpoints analyzed, 0 failing endpoints
+ 1114245 paths analyzed, 3906 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  18.216ns.
+ Minimum period is  16.598ns.
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_379/Score_63 (SLICE_X33Y59.CIN), 85237 paths
+Paths for end point XLXI_379/Score_63 (SLICE_X53Y65.CIN), 30049 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     1.784ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_379/CharNumberCheck_0_2 (FF)
+Slack (setup path):     3.402ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_0 (FF)
   Destination:          XLXI_379/Score_63 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      18.208ns (Levels of Logic = 39)
-  Clock Path Skew:      -0.008ns (0.112 - 0.120)
+  Data Path Delay:      16.586ns (Levels of Logic = 37)
+  Clock Path Skew:      -0.012ns (0.084 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_379/CharNumberCheck_0_2 to XLXI_379/Score_63
+  Maximum Data Path: XLXI_379/CharNumberCheck_0 to XLXI_379/Score_63
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y3.YQ       Tcko                  0.587   XLXI_379/CharNumberCheck_0_2
-                                                       XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.F1       net (fanout=14)       1.452   XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.X        Tilo                  0.759   XLXI_379/N79
-                                                       XLXI_379/Mram_Text28.SLICEM_F
-    SLICE_X39Y9.F1       net (fanout=1)        1.392   XLXI_379/N79
-    SLICE_X39Y9.F5       Tif5                  0.875   XLXI_379/inst_LPM_MUX1_8_f5
-                                                       XLXI_379/inst_LPM_MUX1_91
-                                                       XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.FXINB    net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.Y        Tif6y                 0.521   XLXI_379/inst_LPM_MUX1_6_f6
-                                                       XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.F3      net (fanout=1)        1.273   XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.G2      net (fanout=1)        1.019   XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.Y       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.F4      net (fanout=12)       0.364   XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.F2      net (fanout=5)        0.996   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Topcyf                1.162   XLXI_379/Score<0>
+    SLICE_X49Y18.XQ      Tcko                  0.591   XLXI_379/CharNumberCheck<0>
+                                                       XLXI_379/CharNumberCheck_0
+    SLICE_X48Y23.F1      net (fanout=57)       1.771   XLXI_379/CharNumberCheck<0>
+    SLICE_X48Y23.X       Tilo                  0.759   XLXI_379/N84
+                                                       XLXI_379/Mram_Text38.SLICEM_F
+    SLICE_X47Y23.F2      net (fanout=1)        0.428   XLXI_379/N84
+    SLICE_X47Y23.X       Tilo                  0.704   XLXI_379/inst_LPM_MUX6_6
+                                                       XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.G2      net (fanout=1)        0.642   XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv8
+                                                       XLXI_379/Score_cmp_eq0000_inv8_F
+                                                       XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.F1      net (fanout=2)        0.466   XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
                                                        XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.COUT    Tbyp                  0.118   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.COUT    Tbyp                  0.118   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.COUT    Tbyp                  0.118   XLXI_379/Score<60>
+    SLICE_X53Y64.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
+    SLICE_X53Y64.COUT    Tbyp                  0.118   XLXI_379/Score<60>
                                                        XLXI_379/Mcount_Score_cy<60>
                                                        XLXI_379/Mcount_Score_cy<61>
-    SLICE_X33Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<61>
-    SLICE_X33Y59.CLK     Tcinck                1.002   XLXI_379/Score<62>
+    SLICE_X53Y65.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<61>
+    SLICE_X53Y65.CLK     Tcinck                1.002   XLXI_379/Score<62>
                                                        XLXI_379/Mcount_Score_cy<62>
                                                        XLXI_379/Mcount_Score_xor<63>
                                                        XLXI_379/Score_63
     -------------------------------------------------  ---------------------------
-    Total                                     18.208ns (11.372ns logic, 6.836ns route)
-                                                       (62.5% logic, 37.5% route)
+    Total                                     16.586ns (10.246ns logic, 6.340ns route)
+                                                       (61.8% logic, 38.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.872ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_3/regDI_1 (FF)
+Slack (setup path):     3.409ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_3 (FF)
   Destination:          XLXI_379/Score_63 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      18.128ns (Levels of Logic = 39)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      16.579ns (Levels of Logic = 37)
+  Clock Path Skew:      -0.012ns (0.084 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_3/regDI_1 to XLXI_379/Score_63
+  Maximum Data Path: XLXI_379/CharNumberCheck_3 to XLXI_379/Score_63
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y30.XQ      Tcko                  0.591   XLXI_3/regDI<1>
-                                                       XLXI_3/regDI_1
-    SLICE_X16Y29.F1      net (fanout=18)       0.800   XLXI_3/regDI<1>
-    SLICE_X16Y29.X       Tilo                  0.759   N22
-                                                       XLXI_3/DO<2>122
-    SLICE_X14Y27.F2      net (fanout=2)        1.022   N22
-    SLICE_X14Y27.X       Tilo                  0.759   XLXI_3/DO<1>70
-                                                       XLXI_3/DO<1>70
-    SLICE_X25Y23.G3      net (fanout=3)        1.214   XLXI_3/DO<1>70
-    SLICE_X25Y23.Y       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_3/DO<1>175
-    SLICE_X17Y24.G2      net (fanout=5)        1.029   XLXN_1124<1>
-    SLICE_X17Y24.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv286
-                                                       XLXI_379/Score_cmp_eq0000_inv286_F
-                                                       XLXI_379/Score_cmp_eq0000_inv286
-    SLICE_X17Y28.F2      net (fanout=2)        0.352   XLXI_379/Score_cmp_eq0000_inv286
-    SLICE_X17Y28.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv313
-                                                       XLXI_379/Score_cmp_eq0000_inv313
-    SLICE_X28Y31.F3      net (fanout=1)        0.666   XLXI_379/Score_cmp_eq0000_inv313
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.F2      net (fanout=5)        0.996   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Topcyf                1.162   XLXI_379/Score<0>
+    SLICE_X48Y18.XQ      Tcko                  0.592   XLXI_379/CharNumberCheck<3>
+                                                       XLXI_379/CharNumberCheck_3
+    SLICE_X44Y21.F4      net (fanout=50)       1.769   XLXI_379/CharNumberCheck<3>
+    SLICE_X44Y21.X       Tilo                  0.759   XLXI_379/N96
+                                                       XLXI_379/Mram_Text44.SLICEM_F
+    SLICE_X47Y21.G2      net (fanout=1)        0.399   XLXI_379/N96
+    SLICE_X47Y21.F5      Tif5                  0.875   XLXI_379/inst_LPM_MUX7_4_f5
+                                                       XLXI_379/inst_LPM_MUX7_6
+                                                       XLXI_379/inst_LPM_MUX7_4_f5
+    SLICE_X47Y20.FXINB   net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX7_4_f5
+    SLICE_X47Y20.Y       Tif6y                 0.521   XLXI_379/_varindex0000<7>
+                                                       XLXI_379/inst_LPM_MUX7_2_f6
+    SLICE_X51Y25.F3      net (fanout=2)        1.464   XLXI_379/_varindex0000<7>
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
                                                        XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.COUT    Tbyp                  0.118   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.COUT    Tbyp                  0.118   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.COUT    Tbyp                  0.118   XLXI_379/Score<60>
+    SLICE_X53Y64.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
+    SLICE_X53Y64.COUT    Tbyp                  0.118   XLXI_379/Score<60>
                                                        XLXI_379/Mcount_Score_cy<60>
                                                        XLXI_379/Mcount_Score_cy<61>
-    SLICE_X33Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<61>
-    SLICE_X33Y59.CLK     Tcinck                1.002   XLXI_379/Score<62>
+    SLICE_X53Y65.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<61>
+    SLICE_X53Y65.CLK     Tcinck                1.002   XLXI_379/Score<62>
                                                        XLXI_379/Mcount_Score_cy<62>
                                                        XLXI_379/Mcount_Score_xor<63>
                                                        XLXI_379/Score_63
     -------------------------------------------------  ---------------------------
-    Total                                     18.128ns (11.709ns logic, 6.419ns route)
-                                                       (64.6% logic, 35.4% route)
+    Total                                     16.579ns (9.914ns logic, 6.665ns route)
+                                                       (59.8% logic, 40.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.880ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_379/CharNumberCheck_0_2 (FF)
+Slack (setup path):     3.563ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_3 (FF)
   Destination:          XLXI_379/Score_63 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      18.112ns (Levels of Logic = 39)
-  Clock Path Skew:      -0.008ns (0.112 - 0.120)
+  Data Path Delay:      16.425ns (Levels of Logic = 37)
+  Clock Path Skew:      -0.012ns (0.084 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_379/CharNumberCheck_0_2 to XLXI_379/Score_63
+  Maximum Data Path: XLXI_379/CharNumberCheck_3 to XLXI_379/Score_63
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y3.YQ       Tcko                  0.587   XLXI_379/CharNumberCheck_0_2
-                                                       XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.F1       net (fanout=14)       1.452   XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.X        Tilo                  0.759   XLXI_379/N79
-                                                       XLXI_379/Mram_Text28.SLICEM_F
-    SLICE_X39Y9.F1       net (fanout=1)        1.392   XLXI_379/N79
-    SLICE_X39Y9.F5       Tif5                  0.875   XLXI_379/inst_LPM_MUX1_8_f5
-                                                       XLXI_379/inst_LPM_MUX1_91
-                                                       XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.FXINB    net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.Y        Tif6y                 0.521   XLXI_379/inst_LPM_MUX1_6_f6
-                                                       XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.F3      net (fanout=1)        1.273   XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.G2      net (fanout=1)        1.019   XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.Y       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.F4      net (fanout=12)       0.364   XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.BX      net (fanout=5)        1.293   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Tbxcy                 0.769   XLXI_379/Score<0>
+    SLICE_X48Y18.XQ      Tcko                  0.592   XLXI_379/CharNumberCheck<3>
+                                                       XLXI_379/CharNumberCheck_3
+    SLICE_X48Y23.F4      net (fanout=50)       1.609   XLXI_379/CharNumberCheck<3>
+    SLICE_X48Y23.X       Tilo                  0.759   XLXI_379/N84
+                                                       XLXI_379/Mram_Text38.SLICEM_F
+    SLICE_X47Y23.F2      net (fanout=1)        0.428   XLXI_379/N84
+    SLICE_X47Y23.X       Tilo                  0.704   XLXI_379/inst_LPM_MUX6_6
+                                                       XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.G2      net (fanout=1)        0.642   XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv8
+                                                       XLXI_379/Score_cmp_eq0000_inv8_F
+                                                       XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.F1      net (fanout=2)        0.466   XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
+                                                       XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.COUT    Tbyp                  0.118   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.COUT    Tbyp                  0.118   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.COUT    Tbyp                  0.118   XLXI_379/Score<60>
+    SLICE_X53Y64.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
+    SLICE_X53Y64.COUT    Tbyp                  0.118   XLXI_379/Score<60>
                                                        XLXI_379/Mcount_Score_cy<60>
                                                        XLXI_379/Mcount_Score_cy<61>
-    SLICE_X33Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<61>
-    SLICE_X33Y59.CLK     Tcinck                1.002   XLXI_379/Score<62>
+    SLICE_X53Y65.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<61>
+    SLICE_X53Y65.CLK     Tcinck                1.002   XLXI_379/Score<62>
                                                        XLXI_379/Mcount_Score_cy<62>
                                                        XLXI_379/Mcount_Score_xor<63>
                                                        XLXI_379/Score_63
     -------------------------------------------------  ---------------------------
-    Total                                     18.112ns (10.979ns logic, 7.133ns route)
-                                                       (60.6% logic, 39.4% route)
+    Total                                     16.425ns (10.247ns logic, 6.178ns route)
+                                                       (62.4% logic, 37.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_379/Score_61 (SLICE_X33Y58.CIN), 82531 paths
+Paths for end point XLXI_379/Score_61 (SLICE_X53Y64.CIN), 29095 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     1.902ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_379/CharNumberCheck_0_2 (FF)
+Slack (setup path):     3.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_0 (FF)
   Destination:          XLXI_379/Score_61 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      18.090ns (Levels of Logic = 38)
-  Clock Path Skew:      -0.008ns (0.112 - 0.120)
+  Data Path Delay:      16.468ns (Levels of Logic = 36)
+  Clock Path Skew:      -0.012ns (0.084 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_379/CharNumberCheck_0_2 to XLXI_379/Score_61
+  Maximum Data Path: XLXI_379/CharNumberCheck_0 to XLXI_379/Score_61
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y3.YQ       Tcko                  0.587   XLXI_379/CharNumberCheck_0_2
-                                                       XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.F1       net (fanout=14)       1.452   XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.X        Tilo                  0.759   XLXI_379/N79
-                                                       XLXI_379/Mram_Text28.SLICEM_F
-    SLICE_X39Y9.F1       net (fanout=1)        1.392   XLXI_379/N79
-    SLICE_X39Y9.F5       Tif5                  0.875   XLXI_379/inst_LPM_MUX1_8_f5
-                                                       XLXI_379/inst_LPM_MUX1_91
-                                                       XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.FXINB    net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.Y        Tif6y                 0.521   XLXI_379/inst_LPM_MUX1_6_f6
-                                                       XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.F3      net (fanout=1)        1.273   XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.G2      net (fanout=1)        1.019   XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.Y       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.F4      net (fanout=12)       0.364   XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.F2      net (fanout=5)        0.996   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Topcyf                1.162   XLXI_379/Score<0>
+    SLICE_X49Y18.XQ      Tcko                  0.591   XLXI_379/CharNumberCheck<0>
+                                                       XLXI_379/CharNumberCheck_0
+    SLICE_X48Y23.F1      net (fanout=57)       1.771   XLXI_379/CharNumberCheck<0>
+    SLICE_X48Y23.X       Tilo                  0.759   XLXI_379/N84
+                                                       XLXI_379/Mram_Text38.SLICEM_F
+    SLICE_X47Y23.F2      net (fanout=1)        0.428   XLXI_379/N84
+    SLICE_X47Y23.X       Tilo                  0.704   XLXI_379/inst_LPM_MUX6_6
+                                                       XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.G2      net (fanout=1)        0.642   XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv8
+                                                       XLXI_379/Score_cmp_eq0000_inv8_F
+                                                       XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.F1      net (fanout=2)        0.466   XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
                                                        XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.COUT    Tbyp                  0.118   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.COUT    Tbyp                  0.118   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CLK     Tcinck                1.002   XLXI_379/Score<60>
+    SLICE_X53Y64.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
+    SLICE_X53Y64.CLK     Tcinck                1.002   XLXI_379/Score<60>
                                                        XLXI_379/Mcount_Score_cy<60>
                                                        XLXI_379/Mcount_Score_xor<61>
                                                        XLXI_379/Score_61
     -------------------------------------------------  ---------------------------
-    Total                                     18.090ns (11.254ns logic, 6.836ns route)
-                                                       (62.2% logic, 37.8% route)
+    Total                                     16.468ns (10.128ns logic, 6.340ns route)
+                                                       (61.5% logic, 38.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.990ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_3/regDI_1 (FF)
+Slack (setup path):     3.527ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_3 (FF)
   Destination:          XLXI_379/Score_61 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      18.010ns (Levels of Logic = 38)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      16.461ns (Levels of Logic = 36)
+  Clock Path Skew:      -0.012ns (0.084 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_3/regDI_1 to XLXI_379/Score_61
+  Maximum Data Path: XLXI_379/CharNumberCheck_3 to XLXI_379/Score_61
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y30.XQ      Tcko                  0.591   XLXI_3/regDI<1>
-                                                       XLXI_3/regDI_1
-    SLICE_X16Y29.F1      net (fanout=18)       0.800   XLXI_3/regDI<1>
-    SLICE_X16Y29.X       Tilo                  0.759   N22
-                                                       XLXI_3/DO<2>122
-    SLICE_X14Y27.F2      net (fanout=2)        1.022   N22
-    SLICE_X14Y27.X       Tilo                  0.759   XLXI_3/DO<1>70
-                                                       XLXI_3/DO<1>70
-    SLICE_X25Y23.G3      net (fanout=3)        1.214   XLXI_3/DO<1>70
-    SLICE_X25Y23.Y       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_3/DO<1>175
-    SLICE_X17Y24.G2      net (fanout=5)        1.029   XLXN_1124<1>
-    SLICE_X17Y24.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv286
-                                                       XLXI_379/Score_cmp_eq0000_inv286_F
-                                                       XLXI_379/Score_cmp_eq0000_inv286
-    SLICE_X17Y28.F2      net (fanout=2)        0.352   XLXI_379/Score_cmp_eq0000_inv286
-    SLICE_X17Y28.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv313
-                                                       XLXI_379/Score_cmp_eq0000_inv313
-    SLICE_X28Y31.F3      net (fanout=1)        0.666   XLXI_379/Score_cmp_eq0000_inv313
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.F2      net (fanout=5)        0.996   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Topcyf                1.162   XLXI_379/Score<0>
+    SLICE_X48Y18.XQ      Tcko                  0.592   XLXI_379/CharNumberCheck<3>
+                                                       XLXI_379/CharNumberCheck_3
+    SLICE_X44Y21.F4      net (fanout=50)       1.769   XLXI_379/CharNumberCheck<3>
+    SLICE_X44Y21.X       Tilo                  0.759   XLXI_379/N96
+                                                       XLXI_379/Mram_Text44.SLICEM_F
+    SLICE_X47Y21.G2      net (fanout=1)        0.399   XLXI_379/N96
+    SLICE_X47Y21.F5      Tif5                  0.875   XLXI_379/inst_LPM_MUX7_4_f5
+                                                       XLXI_379/inst_LPM_MUX7_6
+                                                       XLXI_379/inst_LPM_MUX7_4_f5
+    SLICE_X47Y20.FXINB   net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX7_4_f5
+    SLICE_X47Y20.Y       Tif6y                 0.521   XLXI_379/_varindex0000<7>
+                                                       XLXI_379/inst_LPM_MUX7_2_f6
+    SLICE_X51Y25.F3      net (fanout=2)        1.464   XLXI_379/_varindex0000<7>
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
                                                        XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.COUT    Tbyp                  0.118   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.COUT    Tbyp                  0.118   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CLK     Tcinck                1.002   XLXI_379/Score<60>
+    SLICE_X53Y64.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
+    SLICE_X53Y64.CLK     Tcinck                1.002   XLXI_379/Score<60>
                                                        XLXI_379/Mcount_Score_cy<60>
                                                        XLXI_379/Mcount_Score_xor<61>
                                                        XLXI_379/Score_61
     -------------------------------------------------  ---------------------------
-    Total                                     18.010ns (11.591ns logic, 6.419ns route)
-                                                       (64.4% logic, 35.6% route)
+    Total                                     16.461ns (9.796ns logic, 6.665ns route)
+                                                       (59.5% logic, 40.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.998ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_379/CharNumberCheck_0_2 (FF)
+Slack (setup path):     3.681ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_3 (FF)
   Destination:          XLXI_379/Score_61 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.994ns (Levels of Logic = 38)
-  Clock Path Skew:      -0.008ns (0.112 - 0.120)
+  Data Path Delay:      16.307ns (Levels of Logic = 36)
+  Clock Path Skew:      -0.012ns (0.084 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_379/CharNumberCheck_0_2 to XLXI_379/Score_61
+  Maximum Data Path: XLXI_379/CharNumberCheck_3 to XLXI_379/Score_61
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y3.YQ       Tcko                  0.587   XLXI_379/CharNumberCheck_0_2
-                                                       XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.F1       net (fanout=14)       1.452   XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.X        Tilo                  0.759   XLXI_379/N79
-                                                       XLXI_379/Mram_Text28.SLICEM_F
-    SLICE_X39Y9.F1       net (fanout=1)        1.392   XLXI_379/N79
-    SLICE_X39Y9.F5       Tif5                  0.875   XLXI_379/inst_LPM_MUX1_8_f5
-                                                       XLXI_379/inst_LPM_MUX1_91
-                                                       XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.FXINB    net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.Y        Tif6y                 0.521   XLXI_379/inst_LPM_MUX1_6_f6
-                                                       XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.F3      net (fanout=1)        1.273   XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.G2      net (fanout=1)        1.019   XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.Y       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.F4      net (fanout=12)       0.364   XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.BX      net (fanout=5)        1.293   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Tbxcy                 0.769   XLXI_379/Score<0>
+    SLICE_X48Y18.XQ      Tcko                  0.592   XLXI_379/CharNumberCheck<3>
+                                                       XLXI_379/CharNumberCheck_3
+    SLICE_X48Y23.F4      net (fanout=50)       1.609   XLXI_379/CharNumberCheck<3>
+    SLICE_X48Y23.X       Tilo                  0.759   XLXI_379/N84
+                                                       XLXI_379/Mram_Text38.SLICEM_F
+    SLICE_X47Y23.F2      net (fanout=1)        0.428   XLXI_379/N84
+    SLICE_X47Y23.X       Tilo                  0.704   XLXI_379/inst_LPM_MUX6_6
+                                                       XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.G2      net (fanout=1)        0.642   XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv8
+                                                       XLXI_379/Score_cmp_eq0000_inv8_F
+                                                       XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.F1      net (fanout=2)        0.466   XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
+                                                       XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.COUT    Tbyp                  0.118   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.COUT    Tbyp                  0.118   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
-    SLICE_X33Y58.CLK     Tcinck                1.002   XLXI_379/Score<60>
+    SLICE_X53Y64.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<59>
+    SLICE_X53Y64.CLK     Tcinck                1.002   XLXI_379/Score<60>
                                                        XLXI_379/Mcount_Score_cy<60>
                                                        XLXI_379/Mcount_Score_xor<61>
                                                        XLXI_379/Score_61
     -------------------------------------------------  ---------------------------
-    Total                                     17.994ns (10.861ns logic, 7.133ns route)
-                                                       (60.4% logic, 39.6% route)
+    Total                                     16.307ns (10.129ns logic, 6.178ns route)
+                                                       (62.1% logic, 37.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_379/Score_59 (SLICE_X33Y57.CIN), 79825 paths
+Paths for end point XLXI_379/Score_59 (SLICE_X53Y63.CIN), 28141 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     2.024ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_379/CharNumberCheck_0_2 (FF)
+Slack (setup path):     3.636ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_0 (FF)
   Destination:          XLXI_379/Score_59 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.972ns (Levels of Logic = 37)
-  Clock Path Skew:      -0.004ns (0.116 - 0.120)
+  Data Path Delay:      16.350ns (Levels of Logic = 35)
+  Clock Path Skew:      -0.014ns (0.082 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_379/CharNumberCheck_0_2 to XLXI_379/Score_59
+  Maximum Data Path: XLXI_379/CharNumberCheck_0 to XLXI_379/Score_59
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y3.YQ       Tcko                  0.587   XLXI_379/CharNumberCheck_0_2
-                                                       XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.F1       net (fanout=14)       1.452   XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.X        Tilo                  0.759   XLXI_379/N79
-                                                       XLXI_379/Mram_Text28.SLICEM_F
-    SLICE_X39Y9.F1       net (fanout=1)        1.392   XLXI_379/N79
-    SLICE_X39Y9.F5       Tif5                  0.875   XLXI_379/inst_LPM_MUX1_8_f5
-                                                       XLXI_379/inst_LPM_MUX1_91
-                                                       XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.FXINB    net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.Y        Tif6y                 0.521   XLXI_379/inst_LPM_MUX1_6_f6
-                                                       XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.F3      net (fanout=1)        1.273   XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.G2      net (fanout=1)        1.019   XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.Y       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.F4      net (fanout=12)       0.364   XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.F2      net (fanout=5)        0.996   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Topcyf                1.162   XLXI_379/Score<0>
+    SLICE_X49Y18.XQ      Tcko                  0.591   XLXI_379/CharNumberCheck<0>
+                                                       XLXI_379/CharNumberCheck_0
+    SLICE_X48Y23.F1      net (fanout=57)       1.771   XLXI_379/CharNumberCheck<0>
+    SLICE_X48Y23.X       Tilo                  0.759   XLXI_379/N84
+                                                       XLXI_379/Mram_Text38.SLICEM_F
+    SLICE_X47Y23.F2      net (fanout=1)        0.428   XLXI_379/N84
+    SLICE_X47Y23.X       Tilo                  0.704   XLXI_379/inst_LPM_MUX6_6
+                                                       XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.G2      net (fanout=1)        0.642   XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv8
+                                                       XLXI_379/Score_cmp_eq0000_inv8_F
+                                                       XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.F1      net (fanout=2)        0.466   XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
                                                        XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CLK     Tcinck                1.002   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.CLK     Tcinck                1.002   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_xor<59>
                                                        XLXI_379/Score_59
     -------------------------------------------------  ---------------------------
-    Total                                     17.972ns (11.136ns logic, 6.836ns route)
-                                                       (62.0% logic, 38.0% route)
+    Total                                     16.350ns (10.010ns logic, 6.340ns route)
+                                                       (61.2% logic, 38.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.108ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_3/regDI_1 (FF)
+Slack (setup path):     3.643ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_3 (FF)
   Destination:          XLXI_379/Score_59 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.892ns (Levels of Logic = 37)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      16.343ns (Levels of Logic = 35)
+  Clock Path Skew:      -0.014ns (0.082 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_3/regDI_1 to XLXI_379/Score_59
+  Maximum Data Path: XLXI_379/CharNumberCheck_3 to XLXI_379/Score_59
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y30.XQ      Tcko                  0.591   XLXI_3/regDI<1>
-                                                       XLXI_3/regDI_1
-    SLICE_X16Y29.F1      net (fanout=18)       0.800   XLXI_3/regDI<1>
-    SLICE_X16Y29.X       Tilo                  0.759   N22
-                                                       XLXI_3/DO<2>122
-    SLICE_X14Y27.F2      net (fanout=2)        1.022   N22
-    SLICE_X14Y27.X       Tilo                  0.759   XLXI_3/DO<1>70
-                                                       XLXI_3/DO<1>70
-    SLICE_X25Y23.G3      net (fanout=3)        1.214   XLXI_3/DO<1>70
-    SLICE_X25Y23.Y       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_3/DO<1>175
-    SLICE_X17Y24.G2      net (fanout=5)        1.029   XLXN_1124<1>
-    SLICE_X17Y24.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv286
-                                                       XLXI_379/Score_cmp_eq0000_inv286_F
-                                                       XLXI_379/Score_cmp_eq0000_inv286
-    SLICE_X17Y28.F2      net (fanout=2)        0.352   XLXI_379/Score_cmp_eq0000_inv286
-    SLICE_X17Y28.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv313
-                                                       XLXI_379/Score_cmp_eq0000_inv313
-    SLICE_X28Y31.F3      net (fanout=1)        0.666   XLXI_379/Score_cmp_eq0000_inv313
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.F2      net (fanout=5)        0.996   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Topcyf                1.162   XLXI_379/Score<0>
+    SLICE_X48Y18.XQ      Tcko                  0.592   XLXI_379/CharNumberCheck<3>
+                                                       XLXI_379/CharNumberCheck_3
+    SLICE_X44Y21.F4      net (fanout=50)       1.769   XLXI_379/CharNumberCheck<3>
+    SLICE_X44Y21.X       Tilo                  0.759   XLXI_379/N96
+                                                       XLXI_379/Mram_Text44.SLICEM_F
+    SLICE_X47Y21.G2      net (fanout=1)        0.399   XLXI_379/N96
+    SLICE_X47Y21.F5      Tif5                  0.875   XLXI_379/inst_LPM_MUX7_4_f5
+                                                       XLXI_379/inst_LPM_MUX7_6
+                                                       XLXI_379/inst_LPM_MUX7_4_f5
+    SLICE_X47Y20.FXINB   net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX7_4_f5
+    SLICE_X47Y20.Y       Tif6y                 0.521   XLXI_379/_varindex0000<7>
+                                                       XLXI_379/inst_LPM_MUX7_2_f6
+    SLICE_X51Y25.F3      net (fanout=2)        1.464   XLXI_379/_varindex0000<7>
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
                                                        XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CLK     Tcinck                1.002   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.CLK     Tcinck                1.002   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_xor<59>
                                                        XLXI_379/Score_59
     -------------------------------------------------  ---------------------------
-    Total                                     17.892ns (11.473ns logic, 6.419ns route)
-                                                       (64.1% logic, 35.9% route)
+    Total                                     16.343ns (9.678ns logic, 6.665ns route)
+                                                       (59.2% logic, 40.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.120ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_379/CharNumberCheck_0_2 (FF)
+Slack (setup path):     3.797ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_379/CharNumberCheck_3 (FF)
   Destination:          XLXI_379/Score_59 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      17.876ns (Levels of Logic = 37)
-  Clock Path Skew:      -0.004ns (0.116 - 0.120)
+  Data Path Delay:      16.189ns (Levels of Logic = 35)
+  Clock Path Skew:      -0.014ns (0.082 - 0.096)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_379/CharNumberCheck_0_2 to XLXI_379/Score_59
+  Maximum Data Path: XLXI_379/CharNumberCheck_3 to XLXI_379/Score_59
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y3.YQ       Tcko                  0.587   XLXI_379/CharNumberCheck_0_2
-                                                       XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.F1       net (fanout=14)       1.452   XLXI_379/CharNumberCheck_0_2
-    SLICE_X24Y5.X        Tilo                  0.759   XLXI_379/N79
-                                                       XLXI_379/Mram_Text28.SLICEM_F
-    SLICE_X39Y9.F1       net (fanout=1)        1.392   XLXI_379/N79
-    SLICE_X39Y9.F5       Tif5                  0.875   XLXI_379/inst_LPM_MUX1_8_f5
-                                                       XLXI_379/inst_LPM_MUX1_91
-                                                       XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.FXINB    net (fanout=1)        0.000   XLXI_379/inst_LPM_MUX1_8_f5
-    SLICE_X39Y8.Y        Tif6y                 0.521   XLXI_379/inst_LPM_MUX1_6_f6
-                                                       XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.F3      net (fanout=1)        1.273   XLXI_379/inst_LPM_MUX1_6_f6
-    SLICE_X25Y23.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv157
-                                                       XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.G2      net (fanout=1)        1.019   XLXI_379/Score_cmp_eq0000_inv157
-    SLICE_X28Y31.Y       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.F4      net (fanout=12)       0.364   XLXI_379/Score_cmp_eq0000_inv173
-    SLICE_X28Y31.X       Tilo                  0.759   N101
-                                                       XLXI_379/Score_cmp_eq0000_inv140_SW0
-    SLICE_X29Y32.F4      net (fanout=2)        0.340   N101
-    SLICE_X29Y32.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv355
-                                                       XLXI_379/Score_cmp_eq0000_inv355_1
-    SLICE_X33Y28.BX      net (fanout=5)        1.293   XLXI_379/Score_cmp_eq0000_inv355
-    SLICE_X33Y28.COUT    Tbxcy                 0.769   XLXI_379/Score<0>
+    SLICE_X48Y18.XQ      Tcko                  0.592   XLXI_379/CharNumberCheck<3>
+                                                       XLXI_379/CharNumberCheck_3
+    SLICE_X48Y23.F4      net (fanout=50)       1.609   XLXI_379/CharNumberCheck<3>
+    SLICE_X48Y23.X       Tilo                  0.759   XLXI_379/N84
+                                                       XLXI_379/Mram_Text38.SLICEM_F
+    SLICE_X47Y23.F2      net (fanout=1)        0.428   XLXI_379/N84
+    SLICE_X47Y23.X       Tilo                  0.704   XLXI_379/inst_LPM_MUX6_6
+                                                       XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.G2      net (fanout=1)        0.642   XLXI_379/inst_LPM_MUX6_6
+    SLICE_X47Y25.X       Tif5x                 1.025   XLXI_379/Score_cmp_eq0000_inv8
+                                                       XLXI_379/Score_cmp_eq0000_inv8_F
+                                                       XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.F1      net (fanout=2)        0.466   XLXI_379/Score_cmp_eq0000_inv8
+    SLICE_X51Y25.X       Tilo                  0.704   XLXI_379/Score_cmp_eq0000_inv24
+                                                       XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.G1      net (fanout=2)        1.162   XLXI_379/Score_cmp_eq0000_inv24
+    SLICE_X48Y28.Y       Tilo                  0.759   XLXI_379/Score_cmp_eq0000_inv
+                                                       XLXI_379/Score_cmp_eq0000_inv124_1
+    SLICE_X53Y34.F2      net (fanout=5)        1.871   XLXI_379/Score_cmp_eq0000_inv124
+    SLICE_X53Y34.COUT    Topcyf                1.162   XLXI_379/Score<0>
+                                                       XLXI_379/Mcount_Score_lut<0>
                                                        XLXI_379/Mcount_Score_cy<0>
                                                        XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
-    SLICE_X33Y29.COUT    Tbyp                  0.118   XLXI_379/Score<2>
+    SLICE_X53Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<1>
+    SLICE_X53Y35.COUT    Tbyp                  0.118   XLXI_379/Score<2>
                                                        XLXI_379/Mcount_Score_cy<2>
                                                        XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
-    SLICE_X33Y30.COUT    Tbyp                  0.118   XLXI_379/Score<4>
+    SLICE_X53Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<3>
+    SLICE_X53Y36.COUT    Tbyp                  0.118   XLXI_379/Score<4>
                                                        XLXI_379/Mcount_Score_cy<4>
                                                        XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
-    SLICE_X33Y31.COUT    Tbyp                  0.118   XLXI_379/Score<6>
+    SLICE_X53Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<5>
+    SLICE_X53Y37.COUT    Tbyp                  0.118   XLXI_379/Score<6>
                                                        XLXI_379/Mcount_Score_cy<6>
                                                        XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
-    SLICE_X33Y32.COUT    Tbyp                  0.118   XLXI_379/Score<8>
+    SLICE_X53Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<7>
+    SLICE_X53Y38.COUT    Tbyp                  0.118   XLXI_379/Score<8>
                                                        XLXI_379/Mcount_Score_cy<8>
                                                        XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
-    SLICE_X33Y33.COUT    Tbyp                  0.118   XLXI_379/Score<10>
+    SLICE_X53Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<9>
+    SLICE_X53Y39.COUT    Tbyp                  0.118   XLXI_379/Score<10>
                                                        XLXI_379/Mcount_Score_cy<10>
                                                        XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
-    SLICE_X33Y34.COUT    Tbyp                  0.118   XLXI_379/Score<12>
+    SLICE_X53Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<11>
+    SLICE_X53Y40.COUT    Tbyp                  0.118   XLXI_379/Score<12>
                                                        XLXI_379/Mcount_Score_cy<12>
                                                        XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
-    SLICE_X33Y35.COUT    Tbyp                  0.118   XLXI_379/Score<14>
+    SLICE_X53Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<13>
+    SLICE_X53Y41.COUT    Tbyp                  0.118   XLXI_379/Score<14>
                                                        XLXI_379/Mcount_Score_cy<14>
                                                        XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
-    SLICE_X33Y36.COUT    Tbyp                  0.118   XLXI_379/Score<16>
+    SLICE_X53Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<15>
+    SLICE_X53Y42.COUT    Tbyp                  0.118   XLXI_379/Score<16>
                                                        XLXI_379/Mcount_Score_cy<16>
                                                        XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
-    SLICE_X33Y37.COUT    Tbyp                  0.118   XLXI_379/Score<18>
+    SLICE_X53Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<17>
+    SLICE_X53Y43.COUT    Tbyp                  0.118   XLXI_379/Score<18>
                                                        XLXI_379/Mcount_Score_cy<18>
                                                        XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
-    SLICE_X33Y38.COUT    Tbyp                  0.118   XLXI_379/Score<20>
+    SLICE_X53Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<19>
+    SLICE_X53Y44.COUT    Tbyp                  0.118   XLXI_379/Score<20>
                                                        XLXI_379/Mcount_Score_cy<20>
                                                        XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
-    SLICE_X33Y39.COUT    Tbyp                  0.118   XLXI_379/Score<22>
+    SLICE_X53Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<21>
+    SLICE_X53Y45.COUT    Tbyp                  0.118   XLXI_379/Score<22>
                                                        XLXI_379/Mcount_Score_cy<22>
                                                        XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
-    SLICE_X33Y40.COUT    Tbyp                  0.118   XLXI_379/Score<24>
+    SLICE_X53Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<23>
+    SLICE_X53Y46.COUT    Tbyp                  0.118   XLXI_379/Score<24>
                                                        XLXI_379/Mcount_Score_cy<24>
                                                        XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
-    SLICE_X33Y41.COUT    Tbyp                  0.118   XLXI_379/Score<26>
+    SLICE_X53Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<25>
+    SLICE_X53Y47.COUT    Tbyp                  0.118   XLXI_379/Score<26>
                                                        XLXI_379/Mcount_Score_cy<26>
                                                        XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
-    SLICE_X33Y42.COUT    Tbyp                  0.118   XLXI_379/Score<28>
+    SLICE_X53Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<27>
+    SLICE_X53Y48.COUT    Tbyp                  0.118   XLXI_379/Score<28>
                                                        XLXI_379/Mcount_Score_cy<28>
                                                        XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
-    SLICE_X33Y43.COUT    Tbyp                  0.118   XLXI_379/Score<30>
+    SLICE_X53Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<29>
+    SLICE_X53Y49.COUT    Tbyp                  0.118   XLXI_379/Score<30>
                                                        XLXI_379/Mcount_Score_cy<30>
                                                        XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
-    SLICE_X33Y44.COUT    Tbyp                  0.118   XLXI_379/Score<32>
+    SLICE_X53Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<31>
+    SLICE_X53Y50.COUT    Tbyp                  0.118   XLXI_379/Score<32>
                                                        XLXI_379/Mcount_Score_cy<32>
                                                        XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
-    SLICE_X33Y45.COUT    Tbyp                  0.118   XLXI_379/Score<34>
+    SLICE_X53Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<33>
+    SLICE_X53Y51.COUT    Tbyp                  0.118   XLXI_379/Score<34>
                                                        XLXI_379/Mcount_Score_cy<34>
                                                        XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
-    SLICE_X33Y46.COUT    Tbyp                  0.118   XLXI_379/Score<36>
+    SLICE_X53Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<35>
+    SLICE_X53Y52.COUT    Tbyp                  0.118   XLXI_379/Score<36>
                                                        XLXI_379/Mcount_Score_cy<36>
                                                        XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
-    SLICE_X33Y47.COUT    Tbyp                  0.118   XLXI_379/Score<38>
+    SLICE_X53Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<37>
+    SLICE_X53Y53.COUT    Tbyp                  0.118   XLXI_379/Score<38>
                                                        XLXI_379/Mcount_Score_cy<38>
                                                        XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
-    SLICE_X33Y48.COUT    Tbyp                  0.118   XLXI_379/Score<40>
+    SLICE_X53Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<39>
+    SLICE_X53Y54.COUT    Tbyp                  0.118   XLXI_379/Score<40>
                                                        XLXI_379/Mcount_Score_cy<40>
                                                        XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
-    SLICE_X33Y49.COUT    Tbyp                  0.118   XLXI_379/Score<42>
+    SLICE_X53Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<41>
+    SLICE_X53Y55.COUT    Tbyp                  0.118   XLXI_379/Score<42>
                                                        XLXI_379/Mcount_Score_cy<42>
                                                        XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
-    SLICE_X33Y50.COUT    Tbyp                  0.118   XLXI_379/Score<44>
+    SLICE_X53Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<43>
+    SLICE_X53Y56.COUT    Tbyp                  0.118   XLXI_379/Score<44>
                                                        XLXI_379/Mcount_Score_cy<44>
                                                        XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
-    SLICE_X33Y51.COUT    Tbyp                  0.118   XLXI_379/Score<46>
+    SLICE_X53Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<45>
+    SLICE_X53Y57.COUT    Tbyp                  0.118   XLXI_379/Score<46>
                                                        XLXI_379/Mcount_Score_cy<46>
                                                        XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
-    SLICE_X33Y52.COUT    Tbyp                  0.118   XLXI_379/Score<48>
+    SLICE_X53Y58.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<47>
+    SLICE_X53Y58.COUT    Tbyp                  0.118   XLXI_379/Score<48>
                                                        XLXI_379/Mcount_Score_cy<48>
                                                        XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
-    SLICE_X33Y53.COUT    Tbyp                  0.118   XLXI_379/Score<50>
+    SLICE_X53Y59.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<49>
+    SLICE_X53Y59.COUT    Tbyp                  0.118   XLXI_379/Score<50>
                                                        XLXI_379/Mcount_Score_cy<50>
                                                        XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
-    SLICE_X33Y54.COUT    Tbyp                  0.118   XLXI_379/Score<52>
+    SLICE_X53Y60.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<51>
+    SLICE_X53Y60.COUT    Tbyp                  0.118   XLXI_379/Score<52>
                                                        XLXI_379/Mcount_Score_cy<52>
                                                        XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
-    SLICE_X33Y55.COUT    Tbyp                  0.118   XLXI_379/Score<54>
+    SLICE_X53Y61.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<53>
+    SLICE_X53Y61.COUT    Tbyp                  0.118   XLXI_379/Score<54>
                                                        XLXI_379/Mcount_Score_cy<54>
                                                        XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
-    SLICE_X33Y56.COUT    Tbyp                  0.118   XLXI_379/Score<56>
+    SLICE_X53Y62.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<55>
+    SLICE_X53Y62.COUT    Tbyp                  0.118   XLXI_379/Score<56>
                                                        XLXI_379/Mcount_Score_cy<56>
                                                        XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
-    SLICE_X33Y57.CLK     Tcinck                1.002   XLXI_379/Score<58>
+    SLICE_X53Y63.CIN     net (fanout=1)        0.000   XLXI_379/Mcount_Score_cy<57>
+    SLICE_X53Y63.CLK     Tcinck                1.002   XLXI_379/Score<58>
                                                        XLXI_379/Mcount_Score_cy<58>
                                                        XLXI_379/Mcount_Score_xor<59>
                                                        XLXI_379/Score_59
     -------------------------------------------------  ---------------------------
-    Total                                     17.876ns (10.743ns logic, 7.133ns route)
-                                                       (60.1% logic, 39.9% route)
+    Total                                     16.189ns (10.011ns logic, 6.178ns route)
+                                                       (61.8% logic, 38.2% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_384/XLXI_3.A (RAMB16_X0Y4.ADDRA6), 1 path
+Paths for end point XLXI_379/Mram_Text44.SLICEM_F (SLICE_X44Y21.G3), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.964ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_384/I_ModeCtrl_cntX_7 (FF)
-  Destination:          XLXI_384/XLXI_3.A (RAM)
+Slack (hold path):      0.941ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_379/CharNumber_2 (FF)
+  Destination:          XLXI_379/Mram_Text44.SLICEM_F (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.963ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.069 - 0.070)
+  Data Path Delay:      0.941ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_384/I_ModeCtrl_cntX_7 to XLXI_384/XLXI_3.A
+  Minimum Data Path: XLXI_379/CharNumber_2 to XLXI_379/Mram_Text44.SLICEM_F
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X3Y40.YQ       Tcko                  0.470   XLXI_384/I_ModeCtrl_cntX<6>
-                                                       XLXI_384/I_ModeCtrl_cntX_7
-    RAMB16_X0Y4.ADDRA6   net (fanout=9)        0.624   XLXI_384/I_ModeCtrl_cntX<7>
-    RAMB16_X0Y4.CLKA     Tbcka       (-Th)     0.131   XLXI_384/XLXI_3
-                                                       XLXI_384/XLXI_3.A
+    SLICE_X44Y19.YQ      Tcko                  0.522   XLXI_379/CharNumber<3>
+                                                       XLXI_379/CharNumber_2
+    SLICE_X44Y21.G3      net (fanout=50)       0.418   XLXI_379/CharNumber<2>
+    SLICE_X44Y21.CLK     Tah         (-Th)    -0.001   XLXI_379/N96
+                                                       XLXI_379/Mram_Text44.SLICEM_F
     -------------------------------------------------  ---------------------------
-    Total                                      0.963ns (0.339ns logic, 0.624ns route)
-                                                       (35.2% logic, 64.8% route)
+    Total                                      0.941ns (0.523ns logic, 0.418ns route)
+                                                       (55.6% logic, 44.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_379/Score_DI_39 (SLICE_X35Y45.BX), 1 path
+Paths for end point XLXI_379/Mram_Text44.SLICEM_G (SLICE_X44Y21.G3), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.971ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_379/Score_39 (FF)
-  Destination:          XLXI_379/Score_DI_39 (FF)
+Slack (hold path):      0.941ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_379/CharNumber_2 (FF)
+  Destination:          XLXI_379/Mram_Text44.SLICEM_G (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.969ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.002ns (0.125 - 0.127)
+  Data Path Delay:      0.941ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_379/Score_39 to XLXI_379/Score_DI_39
+  Minimum Data Path: XLXI_379/CharNumber_2 to XLXI_379/Mram_Text44.SLICEM_G
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y47.YQ      Tcko                  0.470   XLXI_379/Score<38>
-                                                       XLXI_379/Score_39
-    SLICE_X35Y45.BX      net (fanout=2)        0.406   XLXI_379/Score<39>
-    SLICE_X35Y45.CLK     Tckdi       (-Th)    -0.093   XLXI_379/Score_DI<39>
-                                                       XLXI_379/Score_DI_39
+    SLICE_X44Y19.YQ      Tcko                  0.522   XLXI_379/CharNumber<3>
+                                                       XLXI_379/CharNumber_2
+    SLICE_X44Y21.G3      net (fanout=50)       0.418   XLXI_379/CharNumber<2>
+    SLICE_X44Y21.CLK     Tah         (-Th)    -0.001   XLXI_379/N96
+                                                       XLXI_379/Mram_Text44.SLICEM_G
     -------------------------------------------------  ---------------------------
-    Total                                      0.969ns (0.563ns logic, 0.406ns route)
-                                                       (58.1% logic, 41.9% route)
+    Total                                      0.941ns (0.523ns logic, 0.418ns route)
+                                                       (55.6% logic, 44.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_379/Score_DI_47 (SLICE_X35Y48.BX), 1 path
+Paths for end point XLXI_379/Score_DI_53 (SLICE_X55Y60.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.971ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_379/Score_47 (FF)
-  Destination:          XLXI_379/Score_DI_47 (FF)
+Slack (hold path):      0.970ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_379/Score_53 (FF)
+  Destination:          XLXI_379/Score_DI_53 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.969ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.002ns (0.123 - 0.125)
+  Data Path Delay:      0.976ns (Levels of Logic = 0)
+  Clock Path Skew:      0.006ns (0.022 - 0.016)
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_379/Score_47 to XLXI_379/Score_DI_47
+  Minimum Data Path: XLXI_379/Score_53 to XLXI_379/Score_DI_53
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y51.YQ      Tcko                  0.470   XLXI_379/Score<46>
-                                                       XLXI_379/Score_47
-    SLICE_X35Y48.BX      net (fanout=2)        0.406   XLXI_379/Score<47>
-    SLICE_X35Y48.CLK     Tckdi       (-Th)    -0.093   XLXI_379/Score_DI<47>
-                                                       XLXI_379/Score_DI_47
+    SLICE_X53Y60.YQ      Tcko                  0.470   XLXI_379/Score<52>
+                                                       XLXI_379/Score_53
+    SLICE_X55Y60.BX      net (fanout=2)        0.413   XLXI_379/Score<53>
+    SLICE_X55Y60.CLK     Tckdi       (-Th)    -0.093   XLXI_379/Score_DI<53>
+                                                       XLXI_379/Score_DI_53
     -------------------------------------------------  ---------------------------
-    Total                                      0.969ns (0.563ns logic, 0.406ns route)
-                                                       (58.1% logic, 41.9% route)
+    Total                                      0.976ns (0.563ns logic, 0.413ns route)
+                                                       (57.7% logic, 42.3% route)
 
 --------------------------------------------------------------------------------
 
@@ -1661,7 +1610,7 @@ Slack: 16.824ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 1.588ns (Tbpwl)
   Physical resource: XLXI_384/XLXI_3/CLKA
   Logical resource: XLXI_384/XLXI_3.A/CLKA
-  Location pin: RAMB16_X0Y4.CLKA
+  Location pin: RAMB16_X1Y5.CLKA
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 16.824ns (period - (min high pulse limit / (high pulse / period)))
@@ -1670,7 +1619,7 @@ Slack: 16.824ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 1.588ns (Tbpwh)
   Physical resource: XLXI_384/XLXI_3/CLKA
   Logical resource: XLXI_384/XLXI_3.A/CLKA
-  Location pin: RAMB16_X0Y4.CLKA
+  Location pin: RAMB16_X1Y5.CLKA
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 16.824ns (period - min period limit)
@@ -1678,7 +1627,7 @@ Slack: 16.824ns (period - min period limit)
   Min period limit: 3.176ns (314.861MHz) (Tbp)
   Physical resource: XLXI_384/XLXI_3/CLKA
   Logical resource: XLXI_384/XLXI_3.A/CLKA
-  Location pin: RAMB16_X0Y4.CLKA
+  Location pin: RAMB16_X1Y5.CLKA
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1695,7 +1644,7 @@ Clock to Setup on destination clock Clk_50MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk_50MHz      |   18.216|         |         |         |
+Clk_50MHz      |   16.598|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1704,23 +1653,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 3000052 paths, 0 nets, and 10481 connections
+Constraints cover 1114245 paths, 0 nets, and 8781 connections
 
 Design statistics:
-   Minimum period:  18.216ns{1}   (Maximum frequency:  54.897MHz)
+   Minimum period:  16.598ns{1}   (Maximum frequency:  60.248MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue May 17 15:38:55 2022 
+Analysis completed Mon May 30 16:09:33 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4544 MB
+Peak Memory Usage: 4543 MB
 
 
 

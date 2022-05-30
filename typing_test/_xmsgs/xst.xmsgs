@@ -5,16 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">215</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">215</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">293</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">SDC_FileReader</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">293</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">SDC_FileReader</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">345</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">LCD1x64</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">345</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">LCD1x64</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">372</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">RotaryEnc</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf</arg>&quot; line <arg fmt="%d" index="2">372</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">RotaryEnc</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">Text</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
@@ -72,6 +72,12 @@
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_Text</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumber_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumber_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumber_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.
@@ -138,6 +144,12 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumber_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumberCheck_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumberCheck_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">CharNumberCheck_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">state_machine</arg>&gt;.

@@ -9,14 +9,8 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue May 17 15:38:30 2022
+Mapped Date    : Mon May 30 16:09:12 2022
 
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:54 - 'xc3s500e' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
-----------------------------------------------------------------------
 Mapping design into LUTs...
 Running directed packing...
 WARNING:Pack:1186 - One or more I/O components have conflicting property values.
@@ -24,6 +18,48 @@ WARNING:Pack:1186 - One or more I/O components have conflicting property values.
    pad.  Otherwise, the system will use the first property value read.  To view
    each occurrence, create a detailed map report (run map using the -detail
    option).
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text49 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX_3_f5.  The function generator
+   XLXI_379/Mram_Text49 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX_5 already uses G.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text50 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX1_3_f5.  The function generator
+   XLXI_379/Mram_Text50 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX1_5 already uses G.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text51 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX2_3_f5.  The function generator
+   XLXI_379/Mram_Text51 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX2_5 already uses G.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text52 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX3_3_f5.  The function generator
+   XLXI_379/Mram_Text52 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX3_5 already uses G.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text53 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX4_3_f5.  The function generator
+   XLXI_379/Mram_Text53 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX4_5 already uses G.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text54 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX5_3_f5.  The function generator
+   XLXI_379/Mram_Text54 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX5_5 already uses G.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator XLXI_379/Mram_Text56 failed to merge
+   with F5 multiplexer XLXI_379/inst_LPM_MUX7_3_f5.  The function generator
+   XLXI_379/Mram_Text56 is unable to be placed in the G position because the
+   output signal doesn't match other symbols' use of the G signal.  The signal
+   XLXI_379/inst_LPM_MUX7_5 already uses G.  The design will exhibit suboptimal
+   timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -33,19 +69,19 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    8
 Logic Utilization:
-  Number of Slice Flip Flops:           882 out of   9,312    9%
-  Number of 4 input LUTs:             2,299 out of   9,312   24%
+  Number of Slice Flip Flops:           865 out of   9,312    9%
+  Number of 4 input LUTs:             1,983 out of   9,312   21%
 Logic Distribution:
-  Number of occupied Slices:          1,477 out of   4,656   31%
-    Number of Slices containing only related logic:   1,477 out of   1,477 100%
-    Number of Slices containing unrelated logic:          0 out of   1,477   0%
+  Number of occupied Slices:          1,281 out of   4,656   27%
+    Number of Slices containing only related logic:   1,281 out of   1,281 100%
+    Number of Slices containing unrelated logic:          0 out of   1,281   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,476 out of   9,312   26%
-    Number used as logic:             1,942
-    Number used as a route-thru:        177
-    Number used for Dual Port RAMs:     352
+  Total Number of 4 input LUTs:       2,163 out of   9,312   23%
+    Number used as logic:             1,866
+    Number used as a route-thru:        180
+    Number used for Dual Port RAMs:     112
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:       5
 
@@ -56,9 +92,9 @@ Logic Distribution:
   Number of RAMB16s:                      3 out of      20   15%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.68
+Average Fanout of Non-Clock Nets:                3.39
 
-Peak Memory Usage:  4436 MB
+Peak Memory Usage:  4435 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 

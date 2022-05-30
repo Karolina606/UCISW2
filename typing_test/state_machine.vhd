@@ -63,7 +63,7 @@ architecture Behavioral of state_machine is
 	signal CharNumber 		: positive;
 	signal CharNumberCheck 	: positive;
 	signal Score				: STD_LOGIC_VECTOR (63 downto 0) := X"0000000000000000";
-	type byte_array			is array (1 to 81) of STD_LOGIC_VECTOR (7 downto 0);
+	type byte_array			is array (1 to 100) of STD_LOGIC_VECTOR (7 downto 0);
 	signal Text					: byte_array;
 
 begin
@@ -176,16 +176,23 @@ begin
 	------------------ PROCES LICZ¥CY PUNKTY -------------------------
 	process4 : process( Clk )
 	begin
-		if rising_edge( Clk ) and State = sReadFromKbd and PS2_DO_Rdy = '1' then
-			if PS2_DO = Text(CharNumberCheck) then
-				Score <= std_logic_vector(signed(Score) + 1);
-			else
-				Score <= std_logic_vector(signed(Score) - 1);
-			end if;
+		if rising_edge( Clk ) then
+			case State is
+				when sReadFromKbd =>
+					if PS2_DO_Rdy = '1' then
+						if PS2_DO = Text(CharNumberCheck) then
+							Score <= std_logic_vector(signed(Score) + 1);
+						else
+							Score <= std_logic_vector(signed(Score) - 1);
+						end if;
+					end if;
+					CharNumberCheck <= CharNumberCheck + 1;
+				
+				when sReadFromKbdEnd =>
+					CharNumberCheck <= 1;
 			
-			CharNumberCheck <= CharNumberCheck + 1;
-		elsif State = sReadFromKbdEnd then
-				CharNumberCheck <= 1;
+			when others =>
+			end case;
 		end if;
 	end process process4;
 

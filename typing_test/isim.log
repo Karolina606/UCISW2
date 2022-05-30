@@ -1,6 +1,5 @@
 ISim log file
 Running: C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\typing_test\state_machine_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine_tb_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,8 +11,3 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 10.00us
-ERROR: Index 26 out of bound 1 to 25. 
-ERROR: In process state_machine_tb.vhd:kbd_process 
- 
-INFO: Simulator is stopped.

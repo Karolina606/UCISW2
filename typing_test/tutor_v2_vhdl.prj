@@ -1,4 +1,4 @@
-vhdl work "C:\ucisw2\ucisw2\typing_test\Test_VGAscan\Test_VGAscan\VGAtxt48x20.vhd"
-vhdl work "C:\ucisw2\ucisw2\typing_test\state_machine.vhd"
-vhdl work "C:\ucisw2\ucisw2\typing_test\FSM_SendByte.vhd"
-vhdl work "C:\ucisw2\ucisw2\typing_test\tutor_v2.vhf"
+vhdl work "C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\typing_test\Test_VGAscan\Test_VGAscan\VGAtxt48x20.vhd"
+vhdl work "C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\typing_test\state_machine.vhd"
+vhdl work "C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\typing_test\FSM_SendByte.vhd"
+vhdl work "C:\Users\nogac\Desktop\studejszyn_sem6\UCiSW2\typing_tutor\typing_test\tutor_v2.vhf"

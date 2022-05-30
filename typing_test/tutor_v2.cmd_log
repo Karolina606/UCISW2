@@ -128,3 +128,17 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v
 par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf -ucf LCD.ucf -ucf GenIO.ucf -ucf USB_PS2_SDC.ucf 
 bitgen -intstyle ise -f tutor_v2.ut tutor_v2.ncd 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.syr" 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd PS2_Kbd -sd RotaryEnc -sd SDC_FileReader -sd LCD1x64 -sd VGAtxt48x20 -nt timestamp -uc USB_PS2_SDC.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf -ucf USB_PS2_SDC.ucf -ucf LCD.ucf -ucf GenIO.ucf 
+xst -intstyle ise -ifn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.xst" -ofn "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd PS2_Kbd -sd RotaryEnc -sd SDC_FileReader -sd LCD1x64 -sd VGAtxt48x20 -nt timestamp -uc USB_PS2_SDC.ucf -uc LCD.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 tutor_v2.ngc tutor_v2.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o tutor_v2_map.ncd tutor_v2.ngd tutor_v2.pcf 
+par -w -intstyle ise -ol high -t 1 tutor_v2_map.ncd tutor_v2.ncd tutor_v2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml tutor_v2.twx tutor_v2.ncd -o tutor_v2.twr tutor_v2.pcf -ucf USB_PS2_SDC.ucf -ucf LCD.ucf -ucf GenIO.ucf 

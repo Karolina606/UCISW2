@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: tutor_v2.prj
 
@@ -107,14 +107,14 @@ Cores Search Directories           : {"PS2_Kbd" "RotaryEnc" "SDC_FileReader" "LC
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd" in Library work.
+Compiling vhdl file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/FSM_SendByte.vhd" in Library work.
 Architecture rtl of Entity fsm_sendbyte is up to date.
-Compiling vhdl file "C:/ucisw2/ucisw2/typing_test/state_machine.vhd" in Library work.
+Compiling vhdl file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine.vhd" in Library work.
 Entity <state_machine> compiled.
 Entity <state_machine> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd" in Library work.
+Compiling vhdl file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd" in Library work.
 Architecture structure of Entity vgatxt48x20 is up to date.
-Compiling vhdl file "C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf" in Library work.
+Compiling vhdl file "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf" in Library work.
 Architecture behavioral of Entity tutor_v2 is up to date.
 
 =========================================================================
@@ -133,10 +133,10 @@ Analyzing hierarchy for entity <VGAtxt48x20> in library <work> (architecture <st
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <tutor_v2> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf" line 215: Instantiating black box module <PS2_Kbd>.
-WARNING:Xst:2211 - "C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf" line 293: Instantiating black box module <SDC_FileReader>.
-WARNING:Xst:2211 - "C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf" line 345: Instantiating black box module <LCD1x64>.
-WARNING:Xst:2211 - "C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf" line 372: Instantiating black box module <RotaryEnc>.
+WARNING:Xst:2211 - "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf" line 215: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf" line 293: Instantiating black box module <SDC_FileReader>.
+WARNING:Xst:2211 - "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf" line 345: Instantiating black box module <LCD1x64>.
+WARNING:Xst:2211 - "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf" line 372: Instantiating black box module <RotaryEnc>.
 Entity <tutor_v2> analyzed. Unit <tutor_v2> generated.
 
 Analyzing Entity <FSM_SendByte> in library <work> (Architecture <rtl>).
@@ -609,7 +609,7 @@ Entity <VGAtxt48x20> analyzed. Unit <VGAtxt48x20> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <FSM_SendByte>.
-    Related source file is "C:/ucisw2/ucisw2/typing_test/FSM_SendByte.vhd".
+    Related source file is "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/FSM_SendByte.vhd".
 WARNING:Xst:646 - Signal <HalfByte> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <State>.
     -----------------------------------------------------------------------
@@ -633,9 +633,9 @@ Unit <FSM_SendByte> synthesized.
 
 
 Synthesizing Unit <state_machine>.
-    Related source file is "C:/ucisw2/ucisw2/typing_test/state_machine.vhd".
+    Related source file is "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/state_machine.vhd".
 WARNING:Xst:647 - Input <SD_Busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 340x8-bit dual-port RAM <Mram_Text> for signal <Text>.
+    Found 100x8-bit dual-port RAM <Mram_Text> for signal <Text>.
     Found finite state machine <FSM_1> for signal <State>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
@@ -655,21 +655,24 @@ WARNING:Xst:647 - Input <SD_Busy> is never used. This port will be preserved and
     Found 1-bit register for signal <SD_Pop>.
     Found 1-bit register for signal <Char_WE>.
     Found 64-bit register for signal <Score_DI>.
-    Found 31-bit up counter for signal <CharNumber>.
-    Found 31-bit up counter for signal <CharNumberCheck>.
+    Found 31-bit register for signal <CharNumber>.
+    Found 31-bit adder for signal <CharNumber$addsub0000> created at line 144.
+    Found 31-bit register for signal <CharNumberCheck>.
+    Found 31-bit adder for signal <CharNumberCheck$addsub0000> created at line 189.
     Found 64-bit updown counter for signal <Score>.
-    Found 8-bit comparator equal for signal <Score$cmp_eq0000> created at line 170.
+    Found 8-bit comparator equal for signal <Score$cmp_eq0000> created at line 183.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 RAM(s).
-	inferred   3 Counter(s).
-	inferred  75 D-type flip-flop(s).
+	inferred   1 Counter(s).
+	inferred 137 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 Unit <state_machine> synthesized.
 
 
 Synthesizing Unit <VGAtxt48x20>.
-    Related source file is "C:/ucisw2/ucisw2/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd".
+    Related source file is "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/Test_VGAscan/Test_VGAscan/VGAtxt48x20.vhd".
 WARNING:Xst:646 - Signal <NLW_XLXI_3_DOPB_0_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <NLW_XLXI_3_DOPA_0_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <NLW_XLXI_3_DOB_7_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -686,7 +689,7 @@ Unit <VGAtxt48x20> synthesized.
 
 
 Synthesizing Unit <tutor_v2>.
-    Related source file is "C:/ucisw2/ucisw2/typing_test/tutor_v2.vhf".
+    Related source file is "C:/Users/nogac/Desktop/studejszyn_sem6/UCiSW2/typing_tutor/typing_test/tutor_v2.vhf".
 WARNING:Xst:646 - Signal <XLXN_1186> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <XLXI_382_Blank_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
 Unit <tutor_v2> synthesized.
@@ -697,12 +700,14 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 340x8-bit dual-port RAM                               : 1
-# Counters                                             : 3
- 31-bit up counter                                     : 2
+ 100x8-bit dual-port RAM                               : 1
+# Adders/Subtractors                                   : 2
+ 31-bit adder                                          : 2
+# Counters                                             : 1
  64-bit updown counter                                 : 1
-# Registers                                            : 6
+# Registers                                            : 8
  1-bit register                                        : 3
+ 31-bit register                                       : 2
  64-bit register                                       : 1
  8-bit register                                        : 2
 # Comparators                                          : 1
@@ -722,10 +727,10 @@ Optimizing FSM <XLXI_379/State/FSM> on signal <State[1:7]> with one-hot encoding
  swaitingforstart   | 0000001
  sreadfromsd        | 0000010
  sreadfromsdrdy     | 0000100
- sreadfromsdendbyte | 1000000
- sreadfromsdend     | 0100000
- sreadfromkbd       | 0010000
- sreadfromkbdend    | 0001000
+ sreadfromsdendbyte | 0010000
+ sreadfromsdend     | 0001000
+ sreadfromkbd       | 0100000
+ sreadfromkbdend    | 1000000
 --------------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <XLXI_3/State/FSM> on signal <State[1:3]> with gray encoding.
@@ -754,14 +759,14 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Text> will be implemented on LUTs ei
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 340-word x 8-bit                    |          |
+    |     aspect ratio   | 100-word x 8-bit                    |          |
     |     clkA           | connected to signal <Clk>           | rise     |
     |     weA            | connected to signal <_and0000_0>    | high     |
     |     addrA          | connected to signal <CharNumber>    |          |
     |     diA            | connected to signal <SD_DO>         |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 340-word x 8-bit                    |          |
+    |     aspect ratio   | 100-word x 8-bit                    |          |
     |     addrB          | connected to signal <CharNumberCheck> |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -773,12 +778,13 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # FSMs                                                 : 2
 # RAMs                                                 : 1
- 340x8-bit dual-port distributed RAM                   : 1
-# Counters                                             : 3
- 31-bit up counter                                     : 2
+ 100x8-bit dual-port distributed RAM                   : 1
+# Adders/Subtractors                                   : 2
+ 31-bit adder                                          : 2
+# Counters                                             : 1
  64-bit updown counter                                 : 1
-# Registers                                            : 181
- Flip-Flops                                            : 181
+# Registers                                            : 243
+ Flip-Flops                                            : 243
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
 
@@ -787,6 +793,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <CharNumber_7> of sequential type is unconnected in block <state_machine>.
+WARNING:Xst:2677 - Node <CharNumber_8> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumber_9> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumber_10> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumber_11> of sequential type is unconnected in block <state_machine>.
@@ -809,6 +817,8 @@ WARNING:Xst:2677 - Node <CharNumber_27> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <CharNumber_28> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumber_29> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumber_30> of sequential type is unconnected in block <state_machine>.
+WARNING:Xst:2677 - Node <CharNumberCheck_7> of sequential type is unconnected in block <state_machine>.
+WARNING:Xst:2677 - Node <CharNumberCheck_8> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumberCheck_9> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumberCheck_10> of sequential type is unconnected in block <state_machine>.
 WARNING:Xst:2677 - Node <CharNumberCheck_11> of sequential type is unconnected in block <state_machine>.
@@ -840,7 +850,7 @@ Optimizing unit <VGAtxt48x20> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block tutor_v2, actual ratio is 26.
+Found area constraint ratio of 100 (+ 5) on block tutor_v2, actual ratio is 25.
 INFO:Xst:2260 - The FF/Latch <XLXI_94/State_11> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/State_11_1> 
 INFO:Xst:2260 - The FF/Latch <XLXI_94/State_15> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/State_15_1> 
 INFO:Xst:2260 - The FF/Latch <XLXI_94/SpC_1> in Unit <XLXI_52> is equivalent to the following FF/Latch : <XLXI_94/SpC_1_1> 
@@ -854,12 +864,6 @@ INFO:Xst:2260 - The FF/Latch <cntDigit_0> in Unit <XLXI_382> is equivalent to th
 INFO:Xst:2260 - The FF/Latch <cntDigit_1> in Unit <XLXI_382> is equivalent to the following 2 FFs/Latches : <cntDigit_1_1> <cntDigit_1_2> 
 INFO:Xst:2260 - The FF/Latch <State_16> in Unit <XLXI_382> is equivalent to the following FF/Latch : <State_16_1> 
 FlipFlop XLXI_3/regDI_0 has been replicated 1 time(s)
-FlipFlop XLXI_3/regDI_2 has been replicated 1 time(s)
-FlipFlop XLXI_3/regDI_3 has been replicated 1 time(s)
-FlipFlop XLXI_379/CharNumberCheck_0 has been replicated 3 time(s)
-FlipFlop XLXI_379/CharNumberCheck_1 has been replicated 3 time(s)
-FlipFlop XLXI_379/CharNumberCheck_2 has been replicated 3 time(s)
-FlipFlop XLXI_379/CharNumberCheck_3 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -867,8 +871,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 287
- Flip-Flops                                            : 287
+# Registers                                            : 270
+ Flip-Flops                                            : 270
 
 =========================================================================
 
@@ -897,7 +901,7 @@ Design Statistics
 # IOs                              : 29
 
 Cell Usage :
-# BELS                             : 3195
+# BELS                             : 3070
 #      AND2                        : 1
 #      AND3                        : 4
 #      AND3B1                      : 4
@@ -905,38 +909,38 @@ Cell Usage :
 #      BUF                         : 7
 #      GND                         : 5
 #      INV                         : 64
-#      LUT1                        : 173
-#      LUT2                        : 323
+#      LUT1                        : 177
+#      LUT2                        : 326
 #      LUT2_D                      : 9
 #      LUT2_L                      : 31
-#      LUT3                        : 439
+#      LUT3                        : 388
 #      LUT3_D                      : 11
 #      LUT3_L                      : 20
-#      LUT4                        : 862
-#      LUT4_D                      : 78
-#      LUT4_L                      : 122
+#      LUT4                        : 844
+#      LUT4_D                      : 75
+#      LUT4_L                      : 115
 #      MULT_AND                    : 10
-#      MUXCY                       : 412
-#      MUXF5                       : 144
+#      MUXCY                       : 408
+#      MUXF5                       : 117
 #      MUXF5_L                     : 2
-#      MUXF6                       : 41
-#      MUXF7                       : 12
+#      MUXF6                       : 30
+#      MUXF7                       : 5
 #      OR2                         : 8
 #      VCC                         : 5
 #      XOR2                        : 1
-#      XORCY                       : 406
-# FlipFlops/Latches                : 882
-#      FD                          : 119
+#      XORCY                       : 402
+# FlipFlops/Latches                : 865
+#      FD                          : 131
 #      FDC                         : 3
-#      FDE                         : 344
-#      FDR                         : 90
+#      FDE                         : 312
+#      FDR                         : 91
 #      FDRE                        : 148
-#      FDRS                        : 16
-#      FDRSE                       : 7
-#      FDS                         : 151
-#      FDSE                        : 4
-# RAMS                             : 179
-#      RAM16X1D                    : 176
+#      FDRS                        : 15
+#      FDRSE                       : 8
+#      FDS                         : 152
+#      FDSE                        : 5
+# RAMS                             : 59
+#      RAM16X1D                    : 56
 #      RAMB16_S9                   : 1
 #      RAMB16_S9_S9                : 2
 # Shift Registers                  : 5
@@ -954,12 +958,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                     1204  out of   4656    25%  
- Number of Slice Flip Flops:            882  out of   9312     9%  
- Number of 4 input LUTs:               2489  out of   9312    26%  
-    Number used as logic:              2132
+ Number of Slices:                     1165  out of   4656    25%  
+ Number of Slice Flip Flops:            865  out of   9312     9%  
+ Number of 4 input LUTs:               2177  out of   9312    23%  
+    Number used as logic:              2060
     Number used as Shift registers:       5
-    Number used as RAMs:                352
+    Number used as RAMs:                112
  Number of IOs:                          29
  Number of bonded IOBs:                  29  out of    232    12%  
  Number of BRAMs:                         3  out of     20    15%  
@@ -986,7 +990,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 1066  |
+Clk_50MHz                          | BUFGP                  | 929   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1001,7 +1005,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 16.722ns (Maximum Frequency: 59.801MHz)
+   Minimum period: 15.132ns (Maximum Frequency: 66.085MHz)
    Minimum input arrival time before clock: 9.038ns
    Maximum output required time after clock: 10.292ns
    Maximum combinational path delay: No path found
@@ -1012,28 +1016,26 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 16.722ns (frequency: 59.801MHz)
-  Total number of paths / destination ports: 3000017 / 3598
+  Clock period: 15.132ns (frequency: 66.085MHz)
+  Total number of paths / destination ports: 1114330 / 2353
 -------------------------------------------------------------------------
-Delay:               16.722ns (Levels of Logic = 73)
-  Source:            XLXI_3/regDI_6 (FF)
+Delay:               15.132ns (Levels of Logic = 71)
+  Source:            XLXI_3/regDI_4 (FF)
   Destination:       XLXI_379/Score_63 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_3/regDI_6 to XLXI_379/Score_63
+  Data Path: XLXI_3/regDI_4 to XLXI_379/Score_63
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             17   0.591   1.130  XLXI_3/regDI_6 (XLXI_3/regDI_6)
-     LUT4:I1->O            2   0.704   0.482  XLXI_3/DO<2>122 (N22)
-     LUT4:I2->O            3   0.704   0.566  XLXI_3/DO<1>70 (XLXI_3/DO<1>70)
-     LUT3_D:I2->O          4   0.704   0.666  XLXI_3/DO<1>175 (XLXN_1124<1>)
-     LUT4:I1->O            1   0.704   0.000  XLXI_379/Score_cmp_eq0000_inv286_F (N151)
-     MUXF5:I0->O           2   0.321   0.482  XLXI_379/Score_cmp_eq0000_inv286 (XLXI_379/Score_cmp_eq0000_inv286)
-     LUT3:I2->O            1   0.704   0.455  XLXI_379/Score_cmp_eq0000_inv313 (XLXI_379/Score_cmp_eq0000_inv313)
-     LUT4:I2->O            2   0.704   0.451  XLXI_379/Score_cmp_eq0000_inv140_SW0 (N101)
-     LUT4:I3->O            5   0.704   0.712  XLXI_379/Score_cmp_eq0000_inv355_1 (XLXI_379/Score_cmp_eq0000_inv355)
+     FDE:C->Q             17   0.591   1.130  XLXI_3/regDI_4 (XLXI_3/regDI_4)
+     LUT2:I1->O            2   0.704   0.451  XLXI_3/DO<3>111 (N121)
+     LUT4_L:I3->LO         1   0.704   0.104  XLXI_3/DO<5>1_SW0 (N43)
+     LUT4:I3->O            2   0.704   0.451  XLXI_3/DO<5>1 (N4)
+     LUT4:I3->O            3   0.704   0.566  XLXI_3/DO<5>73 (XLXN_1124<5>)
+     LUT4:I2->O           12   0.704   0.965  XLXI_379/Score_cmp_eq0000_inv108 (XLXI_379/Score_cmp_eq0000_inv108)
+     LUT4:I3->O            5   0.704   0.712  XLXI_379/Score_cmp_eq0000_inv124_1 (XLXI_379/Score_cmp_eq0000_inv124)
      LUT2:I1->O            1   0.704   0.000  XLXI_379/Mcount_Score_lut<0> (XLXI_379/Mcount_Score_lut<0>)
      MUXCY:S->O            1   0.464   0.000  XLXI_379/Mcount_Score_cy<0> (XLXI_379/Mcount_Score_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  XLXI_379/Mcount_Score_cy<1> (XLXI_379/Mcount_Score_cy<1>)
@@ -1101,8 +1103,8 @@ Delay:               16.722ns (Levels of Logic = 73)
      XORCY:CI->O           1   0.804   0.000  XLXI_379/Mcount_Score_xor<63> (XLXI_379/Result<63>)
      FDE:D                     0.308          XLXI_379/Score_63
     ----------------------------------------
-    Total                     16.722ns (11.778ns logic, 4.944ns route)
-                                       (70.4% logic, 29.6% route)
+    Total                     15.132ns (10.753ns logic, 4.379ns route)
+                                       (71.1% logic, 28.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
@@ -1159,14 +1161,14 @@ Offset:              10.292ns (Levels of Logic = 7)
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.86 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.66 secs
  
 --> 
 
-Total memory usage is 4581288 kilobytes
+Total memory usage is 4579496 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   64 (   0 filtered)
+Number of warnings :   68 (   0 filtered)
 Number of infos    :   15 (   0 filtered)
 
